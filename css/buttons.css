@@ -1,0 +1,23 @@
+.btn{
+    background-color: rgb(55, 148, 209);
+    color: #ffffff;
+    display: inline-block;
+    border-radius: 30px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition:ease .5s all; //5s meio segundo
+    border:none;
+    cursor: pointer;
+
+}
+
+.btn:hover{ // escurece o botao
+background-color: rgb(84,180,84);
+}
+
+.btn.btn.orange{
+    background-color: #3794d1;
+}
+.btn.btn.orange:hover{
+    background-color: black;
+}

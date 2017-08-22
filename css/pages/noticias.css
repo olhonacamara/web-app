@@ -1,0 +1,8 @@
+@import url('../styles.css');
+
+#header.page-noticias {
+    background-image: url("../../images/backgrounds/background-header.jpg") ;
+}
+#header.page-noticias{
+    background-color: rgb(242, 242, 242);
+}

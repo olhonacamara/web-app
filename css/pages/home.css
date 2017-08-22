@@ -1,0 +1,21 @@
+@import url('../styles.css');
+
+#header.page-home {
+    background-image: url("../../images/backgrounds/bg1.jpg") ;
+}
+
+
+#team {
+    background-color: rgba(4, 0, 8, 0.28);
+    color: white;
+    align-content: center;
+}
+
+#team h2:after {
+    background-color: rgb(55, 148, 209);
+}
+
+#team .img-box-round {
+    width: 120px;
+    height: 120px;
+}

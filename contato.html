@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contato - De Olho Na Camara</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/pages/contato.css" rel="stylesheet">
+</head>
+<body>
+<header id="header" class="page-contato">
+    <div class="container">
+        <div class="row">
+            <div class="col col-desktop-3 col-6">
+                <a href="index.html">
+                    <img src="images/logo/logoTCS.png" alt="Logo">
+                </a>
+            </div>
+            <div class="col col-desktop-9 col-6'">
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="calendario.html">Calendário</a></li>
+                        <li><a href="noticias.html">Noticias</a></li>
+                        <li><a href="despesas.html">Despesas</a></li>
+                        <li><a href="vereadores.html">Vereadores</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-desktop-12 title">
+                <h1>DE OLHO NA CÂMARA FLORIANÓPOLIS</h1>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="section section-center">
+        <h2>Contato</h2>
+        <p class="subtitle">
+           Sugestões são bem-vindas !! Criticas também.Vamos juntos fazer uma Floripa melhor
+        </p>
+        <div class="container>
+        <form action="https://script.google.com/macros/s/AKfycbzrYTH-Gswr19GP9zcN-0K1O1-_-mgDA3FXAHxrps-addmEfr8/exec"class="row" method="post">
+            <div class="col col -desktop-6 col-6">
+                <div class="input-control">
+                    <input id="nome" name="nome" type="text" required placeholder="Nome:">
+                    <label for="nome">Nome: </label>
+                </div>
+                <div class="input-control">
+                    <input id="email" name="Email:" type="email" placeholder="Email:">
+                    <label for="email">Email:</label>
+                </div>
+                <div class="input-control">
+                    <input id="telefone" name="telefone" type="number"placeholder="Telefone:">
+                    <label for="telefone">Telefone:</label>
+                </div>
+            </div>
+            <div class="col col-desktop-6" col-6>
+                <div cla    ss="input-control">
+                    <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Mensagem ..."></textarea>
+                    <label for="mensagem">  </label>
+                </div>
+            </div>
+            <div class="col col-desktop-12 col-6">
+              <div class="col-col-desktop-12 col-6">
+                 <input type="submit" value="Enviar" class="btn orange">
+              </div>
+            </div>
+        </form>
+        </div>
+    </section>
+</main>
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col col-offset-desktop-1 col-desktop-3">
+                <p><a href=""><img src="images/logo/logoProjetoTcsn.png" alt="Logo da Chatschool"></a></p>
+                <p>Tem a participação popular facilitando o acesso às informações
+                    relevantes de atuação dos vereadores na CMF, para que seja visualizado de forma
+                    clara, o desempenho dos vereadores e detalhes de funcionamento da câmara.
+                </p>
+            </div>
+            <div class="col col-offset-desktop-1 col-desktop-2 col-2">
+                <h3>Menu</h3>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="calendario.html">Calendário</a></li>
+                        <li><a href="noticias.html">Noticias</a></li>
+                        <li><a href="despesas.html">Despesas</a></li>
+                        <li><a href="vereadores.html">Vereadores</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col col-desktop-3 social col-4">
+                <a href=""><img src="images/social-facebook.png" alt=""></a>
+                <a href=""><img src="images/social-twitter.png" alt=""></a>
+                <a href=""><img src="images/social-youtube.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="copyright">
+    &copy; Chatschool - 2017 - Todos os direitos reservados
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+    $('form').submit(function (event) {
+        event.preventDefault();/*anula envio*/
+        /*metodo para enviar */
+        $('form input[type="submit"]').val('Aguarde...')
+            .attr('disabled', true);
+        $.ajax({
+            type: $('form').attr('method'),
+            url: $('form').attr('action'),
+            data: $('form').serialize(),
+            success: function () {
+                alert('Email enviado com sucesso');
+                $('form').trigger('reset');
+
+                $('form input[type="submit"]').val('Enviar')
+                    .attr('disabled', false);
+            }
+        });
+    });
+</script>
+    </body>
+    </html>
