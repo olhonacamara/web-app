@@ -17,7 +17,7 @@ ordem
      line-height: 25px;
 }
 a {
-    text-decoration: none; // extrai a marcacao do link
+    text-decoration: none; /* extrai a marcacao do link */
 }
 
 #header .btn{
@@ -26,12 +26,12 @@ a {
     border-radius: 30px;
     padding: 10px 30px;
 }
-#header .btn:hover{ // escurece o botao
+#header .btn:hover{ /* escurece o botao */
     background-color: rgb(84,180,84);
 }
 #header nav a {
     display: inline-block;
-    text-decoration: none; // extrai a marcacao do link
+    text-decoration: none; /* extrai a marcacao do link */
     padding:10px;
     border-radius: 5px;
 }
@@ -77,7 +77,7 @@ a {
 }
 .section{
     text-align: center;
-    padding: 30px 0 10px 0; // cima direita embaixo esquerda
+    padding: 30px 0 10px 0; /* cima direita embaixo esquerda */
 }
 .section -center{
     text-align: center;
@@ -160,7 +160,7 @@ a {
 
 }
 #footer .social img {
-    vertical-align: middle; // centralizou melhor
+    vertical-align: middle; /* centralizou melhor */
 }
 #copyright{
     text-align: center;
