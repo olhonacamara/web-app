@@ -1,7 +1,17 @@
 SELECT * FROM vereadores;
-DELETE FROM vereadores where id = 3;
+SELECT * FROM vereadores ORDER BY (nome_completo) ASC;
+-- DELETE FROM vereadores where id = 3;
 ALTER TABLE vereadores AUTO_INCREMENT = 1;
-UPDATE vereadores SET telefone = '(48) 3027-5776' WHERE id = 5;
+-- UPDATE vereadores SET telefone = '(48) 3027-5776' WHERE id = 5;
+SELECT * FROM vereadores WHERE sexo = 'M';
+SELECT * FROM vereadores WHERE cor_raca = 'Preta';
+SELECT * FROM vereadores WHERE partido = 'PMDB';
+SELECT * FROM vereadores WHERE data_nascimento between '1980-01-01' and current_date();
+SELECT * FROM vereadores WHERE data_nascimento between '1940-01-01' and '1980-01-01' ORDER BY (data_nascimento) ASC;
+
+SELECT TIMESTAMPDIFF(YEAR, '1970-02-01', CURDATE()) AS age;
+
+
 SELECT * from vereadores WHERE nome_completo = 'AFRÂNIO TADEU BOPPRÉ';
 UPDATE vereadores set partido = 'PSD' WHERE id = 5;
 
@@ -41,8 +51,6 @@ cor_raca, foto, telefone, email, site, partido, total_votos, inicio_mandato, fim
 VALUES
 ('EDINON MANOEL DA ROSA', 'DINHO', '1962-11-13 08:00:00', 'M', 'Ensino Médio Completo', 'Branca',
 null, '(48) 3027-5764', 'dinho.pmdb@gmail.com', null, 'PMDB', 2400, '2017-01-01 08:00:00', '2020-12-31 23:59:59');
-
--- 12/09 18/05/1952
 
 INSERT INTO vereadores (nome_completo, nome_publico, data_nascimento, sexo, grau_instrucao,
 cor_raca, foto, telefone, email, site, partido, total_votos, inicio_mandato, fim_mandato)
@@ -103,3 +111,57 @@ cor_raca, foto, telefone, email, site, partido, total_votos, inicio_mandato, fim
 VALUES
 ('MARIA DA GRAÇA OLIVEIRA DUTRA', 'MARIA DA GRAÇA', '1949-07-12 08:00:00', 'F', 'Superior Completo', 'Branca',
 null, '(48) 3027-5746', 'gabinetemariadagraca@gmail.com', null, 'PMDB', 2116, '2017-01-01 08:00:00', '2020-12-31 23:59:59');
+
+INSERT INTO vereadores (nome_completo, nome_publico, data_nascimento, sexo, grau_instrucao,
+cor_raca, foto, telefone, email, site, partido, total_votos, inicio_mandato, fim_mandato)
+VALUES
+('MARCOS JOSÉ DE ABREU', 'MARQUITO', '1979-12-06 08:00:00', 'M', 'Superior Completo', 'Branca',
+null, '(48) 3027-5812', 'marquitopsol@gmail.com', null, 'PSOL', 5448, '2017-01-01 08:00:00', '2020-12-31 23:59:59');
+
+INSERT INTO vereadores (nome_completo, nome_publico, data_nascimento, sexo, grau_instrucao,
+cor_raca, foto, telefone, email, site, partido, total_votos, inicio_mandato, fim_mandato)
+VALUES
+('MILTON DONIZETE BARCELOS JUNIOR', 'MILTINHO BARCELOS', '1981-12-08 08:00:00', 'M', 'Superior Completo', 'Branca',
+null, '(48) 3027-5799', 'vereadormiltinhobarcelos@gmail.com', null, 'DEM', 1771, '2017-01-01 08:00:00', '2020-12-31 23:59:59');
+
+INSERT INTO vereadores (nome_completo, nome_publico, data_nascimento, sexo, grau_instrucao,
+cor_raca, foto, telefone, email, site, partido, total_votos, inicio_mandato, fim_mandato)
+VALUES
+('PEDRO DE ASSIS SILVESTRE', 'PEDRÃO', '1987-08-20 08:00:00', 'M', 'Superior Completo', 'Branca',
+null, '(48) 3027-5802', 'gabinetepedrao@gmail.com', null, 'PP', 11197, '2017-01-01 08:00:00', '2020-12-31 23:59:59');
+
+INSERT INTO vereadores (nome_completo, nome_publico, data_nascimento, sexo, grau_instrucao,
+cor_raca, foto, telefone, email, site, partido, total_votos, inicio_mandato, fim_mandato)
+VALUES
+('RENATO GESKE', 'RENATO DA FARMÁCIA', '1954-06-18 08:00:00', 'M', 'Superior Completo', 'Branca',
+null, '(48) 3027-5780', 'assessoriarenatodafarmacia@gmail.com', null, 'PSOL', 2540, '2017-01-01 08:00:00', '2020-12-31 23:59:59');
+
+INSERT INTO vereadores (nome_completo, nome_publico, data_nascimento, sexo, grau_instrucao,
+cor_raca, foto, telefone, email, site, partido, total_votos, inicio_mandato, fim_mandato)
+VALUES
+('ROBERTO KATUMI ODA', 'KATUMI', '1969-06-15 08:00:00', 'M', 'Superior Incompleto', 'Branca',
+null, '(48) 3027-5812', 'katumioda@cmf.sc.gov.br', null, 'PSD', 2988, '2017-01-01 08:00:00', '2020-12-31 23:59:59');
+
+INSERT INTO vereadores (nome_completo, nome_publico, data_nascimento, sexo, grau_instrucao,
+cor_raca, foto, telefone, email, site, partido, total_votos, inicio_mandato, fim_mandato)
+VALUES
+('TIAGO DA SILVA', 'TIAGO SILVA', '1982-09-11 08:00:00', 'M', 'Ensino Médio Completo', 'Preta',
+null, null, 'tiagosilva@cmf.sc.gov.br', null, 'PMDB', 2638, '2017-01-01 08:00:00', '2020-12-31 23:59:59');
+
+INSERT INTO vereadores (nome_completo, nome_publico, data_nascimento, sexo, grau_instrucao,
+cor_raca, foto, telefone, email, site, partido, total_votos, inicio_mandato, fim_mandato)
+VALUES
+('VANDERLEI FARIAS', 'VANDERLEI LELA', '1978-06-02 08:00:00', 'M', 'Superior Incompleto', 'Branca',
+null, '(48) 3027-5739', 'vanderlei@cmf.sc.gov.br', null, 'PDT', 2777, '2017-01-01 08:00:00', '2020-12-31 23:59:59');
+
+INSERT INTO vereadores (nome_completo, nome_publico, data_nascimento, sexo, grau_instrucao,
+cor_raca, foto, telefone, email, site, partido, total_votos, inicio_mandato, fim_mandato)
+VALUES
+('GABRIEL MEURER', 'GABRIELZINHO', '1985-05-14 08:00:00', 'M', 'Superior Completo', 'Branca',
+null, '(48) 3027-5850', 'gabinete@gabrielzinhovereador.com.br', null, 'PDT', 2777, '2017-01-01 08:00:00', '2020-12-31 23:59:59');
+
+INSERT INTO vereadores (nome_completo, nome_publico, data_nascimento, sexo, grau_instrucao,
+cor_raca, foto, telefone, email, site, partido, total_votos, inicio_mandato, fim_mandato)
+VALUES
+('RAFAEL FILOMENO DAUX', 'RAFAEL DAUX', '1990-11-03 08:00:00', 'M', 'Ensino Médio Completo', 'Branca',
+null, null, null, null, 'PMDB', 3018, '2017-01-01 08:00:00', '2020-12-31 23:59:59');
