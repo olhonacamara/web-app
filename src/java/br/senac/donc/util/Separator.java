@@ -23,7 +23,7 @@ public class Separator {
         Vereador vereador = new Vereador();
 
         //inserir o caminho do arquivo .txt no disco
-        String pathFile = "/home/danilosetubal/Devlopment/repositories/olho-na-camara/falcon/sggpJaneiro2017.txt";
+        String pathFile = "/Volumes/Macintosh_HD/Users/tiagomeurer/Desktop/sggp_novembro_2016.txt";
 
         System.out.printf("\nConteúdo do arquivo texto:\n");
         try {
