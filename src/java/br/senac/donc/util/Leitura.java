@@ -308,22 +308,16 @@ public class Leitura {
                     //capturando a linha *Saldo anterior*
                     if (linha.equals("Saldo Anterior :")) {
                         String saldoAnterior = lerArq.readLine();
-                        saldoAnterior = saldoAnterior.replace(",", "");
-                        saldoAnterior = saldoAnterior.replace("(", "");
-                        saldoAnterior = saldoAnterior.replace(")", "");
-                        Double saldoAnteriorDouble = (Double.parseDouble(saldoAnterior));
-                        balancete.setAnoAnterior(saldoAnteriorDouble);
+                        Double saldoAnteriorDouble;
+                        balancete.setAnoAnterior(saldoAnteriorDouble = replaceDouble(saldoAnterior));
                         System.out.println("Valor capturado de Saldo anterior: " + balancete.getAnoAnterior());
                     }
 
                     //capturando a linha *Saldo Acumulado*
                     if (linha.equals("Saldo Acumulado:")) {
                         String saldoAcumulado = lerArq.readLine();
-                        saldoAcumulado = saldoAcumulado.replace(",", "");
-                        saldoAcumulado = saldoAcumulado.replace("(", "");
-                        saldoAcumulado = saldoAcumulado.replace(")", "");
-                        Double saldoAcumuladoDouble = (Double.parseDouble(saldoAcumulado));
-                        balancete.setSaldoAcumulado(saldoAcumuladoDouble);
+                        Double saldoAcumuladoDouble;
+                        balancete.setSaldoAcumulado(saldoAcumuladoDouble = replaceDouble(saldoAcumulado));
                         System.out.println("Valor capturado de Saldo Acumulado: " + balancete.getSaldoAcumulado());
                     }
 
@@ -331,9 +325,8 @@ public class Leitura {
                     if (linha.equals("Créditos no Mês :")) {
                         lerArq.readLine();
                         String creditosMes = lerArq.readLine();
-                        creditosMes = creditosMes.replace(",", "");
-                        Double creditosMesDouble = (Double.parseDouble(creditosMes));
-                        balancete.setCreditosMes(creditosMesDouble);
+                        Double creditosMesDouble;
+                        balancete.setCreditosMes(creditosMesDouble = replaceDouble(creditosMes));
                         System.out.println("Valor capturado de Creditos Mês: " + balancete.getCreditosMes());
                     }
 
@@ -362,9 +355,12 @@ public class Leitura {
     }
 
     public static Double replaceDouble(String valor) {
-        String valorAlterado = valor.replace(",", "");
-        Double valorDouble = (Double.parseDouble(valorAlterado));
+        String valorReplace = valor.replace(",", "");
+        if (valorReplace.contains("(") && valorReplace.contains(")")) {
+            valorReplace = valorReplace.replace("(", "");
+            valorReplace = valorReplace.replace(")", "");
+        }
+        Double valorDouble = (Double.parseDouble(valorReplace));
         return valorDouble;
     }
-
 }
