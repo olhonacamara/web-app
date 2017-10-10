@@ -340,14 +340,12 @@ public class Leitura {
                     //capturando a linha *Debitos no Mes*
                     if (linha.equals("Débitos no Mês :")) {
                         String debitosMes = lerArq.readLine();
-                        debitosMes = debitosMes.replace(",", "");
-                        Double debitosMesDouble = (Double.parseDouble(debitosMes));
-                        balancete.setDebitosMes(debitosMesDouble);
+                        Double debitosMesDouble;
+                        balancete.setDebitosMes(debitosMesDouble = replaceDouble(debitosMes));
                         System.out.println("Valor capturado de Debitos Mês: " + balancete.getDebitosMes());
 
                     }
                 }
-
 
             } while (linha != null);
 
@@ -360,5 +358,13 @@ public class Leitura {
         System.out.println("O codigo percorreu um total de " + contVereador + " vereadores.");
         //criar um metodo para realizar a conversão de String para Double   
         //criar método para o replace de "," para ""
+
     }
+
+    public static Double replaceDouble(String valor) {
+        String valorAlterado = valor.replace(",", "");
+        Double valorDouble = (Double.parseDouble(valorAlterado));
+        return valorDouble;
+    }
+
 }
