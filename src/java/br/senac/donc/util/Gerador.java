@@ -5,7 +5,7 @@ import javax.persistence.Persistence;
 
 public class Gerador {
     public static void main(String[] args) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("SenacComPadroesPU");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("doncPU");
         emf.close();
     }
 }
