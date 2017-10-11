@@ -12,6 +12,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Leitura {
@@ -53,10 +57,24 @@ public class Leitura {
                     //captura do periodo 
                     {
                         if (linha.equals("Período :")) {
-                            balancete.setDataInicial(lerArq.readLine());
-                            balancete.setDataFinal(lerArq.readLine());
-                            String dataFim = balancete.getDataFinal().replace("a", "");
-                            balancete.setDataFinal(dataFim);
+
+                            String dataInicialString = lerArq.readLine();
+                            String dataFinalString = lerArq.readLine().replace("a", "");
+
+                            Date dataInicio = null;
+                            Date dataFinal = null;
+                            String dataInicial = new String(lerArq.readLine());
+                            String dataFim = new String(lerArq.readLine());
+                            SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+                            format.setLenient(false);
+                            try {
+                                dataInicio = format.parse(dataInicialString);
+                                dataFinal = format.parse(dataFinalString);
+                            } catch (ParseException ex) {
+                                ex.printStackTrace();
+                            }
+                            balancete.setDataFinal(dataFinal);
+                            balancete.setDataInicial(dataInicio);
                             System.out.println("Capturou o perido de "
                                     + balancete.getDataInicial() + " à " + balancete.getDataFinal());
                         }

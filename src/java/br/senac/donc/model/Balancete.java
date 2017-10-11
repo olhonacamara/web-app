@@ -5,10 +5,28 @@
  */
 package br.senac.donc.model;
 
+import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+@Entity
+@Table(name="balancete")
+
 public class Balancete {
+
+    @Id
+    private Long ID;
+
+
+    @Temporal(TemporalType.DATE)
+    private Date dataInicial;
     
-    private String dataInicial;
-    private String dataFinal;
+    @Temporal(TemporalType.DATE)
+    private Date dataFinal;
+
     private Double cotaMensal;
     private Double creditos;
     private Double outros1;
@@ -36,24 +54,64 @@ public class Balancete {
     private Double debitoAnoAnterior;
     private Double jornalRevista;
 
-    
+    public Balancete(Long ID, Date dataInicial, Date dataFinal, Double cotaMensal, Double creditos, Double outros1, Double anoAnterior, Double debitos, Double bolsaEstagio, Double passagens, Double telefoneFixo, Double xerox, Double correio, Double materialExpediente, Double diarias, Double gratificacao, Double outros2, Double selos, Double servicos, Double telefoneMovel, Double cursos, Double carimbos, Double saldoAnterior, Double saldoAcumulado, Double creditosMes, Double debitosMes, Double interurbano, Double debitoAnoAnterior, Double jornalRevista) {
+        this.ID = ID;
+        this.dataInicial = dataInicial;
+        this.dataFinal = dataFinal;
+        this.cotaMensal = cotaMensal;
+        this.creditos = creditos;
+        this.outros1 = outros1;
+        this.anoAnterior = anoAnterior;
+        this.debitos = debitos;
+        this.bolsaEstagio = bolsaEstagio;
+        this.passagens = passagens;
+        this.telefoneFixo = telefoneFixo;
+        this.xerox = xerox;
+        this.correio = correio;
+        this.materialExpediente = materialExpediente;
+        this.diarias = diarias;
+        this.gratificacao = gratificacao;
+        this.outros2 = outros2;
+        this.selos = selos;
+        this.servicos = servicos;
+        this.telefoneMovel = telefoneMovel;
+        this.cursos = cursos;
+        this.carimbos = carimbos;
+        this.saldoAnterior = saldoAnterior;
+        this.saldoAcumulado = saldoAcumulado;
+        this.creditosMes = creditosMes;
+        this.debitosMes = debitosMes;
+        this.interurbano = interurbano;
+        this.debitoAnoAnterior = debitoAnoAnterior;
+        this.jornalRevista = jornalRevista;
+    }
 
     public Balancete() {
     }
+    
+    
 
-    public String getDataInicial() {
+    public Long getID() {
+        return ID;
+    }
+
+    public void setID(Long ID) {
+        this.ID = ID;
+    }
+
+    public Date getDataInicial() {
         return dataInicial;
     }
 
-    public void setDataInicial(String dataInicial) {
+    public void setDataInicial(Date dataInicial) {
         this.dataInicial = dataInicial;
     }
 
-    public String getDataFinal() {
+    public Date getDataFinal() {
         return dataFinal;
     }
 
-    public void setDataFinal(String dataFinal) {
+    public void setDataFinal(Date dataFinal) {
         this.dataFinal = dataFinal;
     }
 
@@ -264,7 +322,7 @@ public class Balancete {
     public void setJornalRevista(Double jornalRevista) {
         this.jornalRevista = jornalRevista;
     }
-
-   
+    
+    
     
 }
