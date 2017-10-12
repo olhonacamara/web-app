@@ -1,13 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.senac.donc.model;
 
 import java.util.Date;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -18,8 +15,11 @@ import javax.persistence.TemporalType;
 public class Balancete {
 
     @Id
+    @GeneratedValue
     private Long ID;
-
+    
+    @ManyToOne
+    private Vereador vereador;
 
     @Temporal(TemporalType.DATE)
     private Date dataInicial;
@@ -322,7 +322,5 @@ public class Balancete {
     public void setJornalRevista(Double jornalRevista) {
         this.jornalRevista = jornalRevista;
     }
-    
-    
     
 }
