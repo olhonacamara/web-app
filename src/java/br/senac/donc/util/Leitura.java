@@ -32,6 +32,7 @@ public class Leitura {
         //String line22 = Files.readAllLines(Paths.get("/Volumes/Macintosh_HD/tiagomeurer/Desktop/test.txt")).get(21);
         //inserir o caminho do arquivo .txt no disco
         String caminho = "src/java/br/senac/donc/util/balanceteTXT.txt";
+//        String caminho = "/Volumes/Macintosh_HD/Users/tiagomeurer/Desktop/test.txt";
         
         System.out.printf("\nConteúdo do arquivo extraido do .txt:\n");
         
@@ -61,22 +62,15 @@ public class Leitura {
                     // Padrão MySQL AAAA/MM/DD
                     {
                         if (linha.equals("Período :")) {
-
-                            
-                            String dataInicialString = lerArq.readLine();
-                            String dataFinalString = lerArq.readLine().replace("a", "");
-                            System.out.println("Data Inicial:" + dataInicialString + 
-                                    "\nData Final: " + dataFinalString);
-
                             Date dataInicio = null;
                             Date dataFinal = null;
                             String dataInicial = new String(lerArq.readLine());
-                            String dataFim = new String(lerArq.readLine());
+                            String dataFim = new String(lerArq.readLine().replace("a", ""));
                             SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
                             format.setLenient(false);
                             try {
-                                dataInicio = format.parse(dataInicialString);
-                                dataFinal = format.parse(dataFinalString);
+                                dataInicio = format.parse(dataInicial);
+                                dataFinal = format.parse(dataFim);
                             } catch (ParseException ex) {
                                 ex.printStackTrace();
                             }
@@ -86,13 +80,13 @@ public class Leitura {
                                     + balancete.getDataInicial() + " à " + balancete.getDataFinal());
                         }
                     }
-
                     //Captura vereador
                     if (linha.equals("Vereador :")) {
                         //pulando uma linha pois a linha apos Vereador é o codigo do vereador
                         lerArq.readLine();
                         vereador.setNomeCompleto(lerArq.readLine());
                         System.out.println("Vereador: " + vereador.getNomeCompleto());
+                        System.out.println("passei por aqui");
                         contVereador++;
                     }
 
