@@ -8,6 +8,7 @@ package br.senac.donc.model;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -22,34 +23,47 @@ import javax.persistence.TemporalType;
  * @author danilosetubal
  */
 @Entity
-@Table(name="veradores")
+@Table(name="vereadores")
 public class Vereador {
     
     @Id
     @GeneratedValue
     private Long id;
+    
+    @Column(name = "nome_completo")
     private String nomeCompleto;
+    
+    @Column(name = "nome_publico")
     private String nomePublico;
     
     @OneToMany(mappedBy = "vereador", targetEntity = Balancete.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Balancete> balancetes;
     
+    @Column(name = "data_nascimento")
     @Temporal(TemporalType.DATE)
     private Date dataNascimento;
     
     private String sexo;
+    
+    @Column(name = "grau_instrucao")
     private String grauInstrucao;
+    
+    @Column(name = "cor_raca")
     private String corRaca;
     private String foto;
     private String telefone;
     private String email;
     private String site;
     private String partido;
+    
+    @Column(name = "total_votos")
     private Integer totalVotos;
     
+    @Column(name = "inicio_mandato")
     @Temporal(TemporalType.DATE)
     private Date inicioMandato;
     
+    @Column(name = "fim_mandato")
     @Temporal(TemporalType.DATE)
     private Date fimMandato;
 

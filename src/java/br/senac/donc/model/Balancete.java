@@ -1,6 +1,7 @@
 package br.senac.donc.model;
 
 import java.util.Date;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -10,13 +11,13 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-@Table(name="balancete")
+@Table(name="balancetes")
 
 public class Balancete {
 
     @Id
     @GeneratedValue
-    private Long ID;
+    private Long id;
     
     @ManyToOne
     private Vereador vereador;
@@ -27,35 +28,58 @@ public class Balancete {
     @Temporal(TemporalType.DATE)
     private Date dataFinal;
 
+    @Column(name = "cota_mensal")
     private Double cotaMensal;
     private Double creditos;
     private Double outros1;
+    
+    @Column(name = "ano_anterior")
     private Double anoAnterior;
     private Double debitos;
+    
+    @Column(name = "bolsa_estagio")
     private Double bolsaEstagio;
     private Double passagens;
+    
+    @Column(name = "telefone_fixo")
     private Double telefoneFixo;
     private Double xerox;
     private Double correio;
+    
+    @Column(name = "material_expediente")
     private Double materialExpediente;
     private Double diarias;
     private Double gratificacao;
     private Double outros2;
     private Double selos;
     private Double servicos;
+    
+    @Column(name = "telefone_movel")
     private Double telefoneMovel;
     private Double cursos;
     private Double carimbos;
+    
+    @Column(name = "saldo_anterior")
     private Double saldoAnterior;
+    
+    @Column(name = "saldo_acumulado")
     private Double saldoAcumulado;
+    
+    @Column(name = "creditos_mes")
     private Double creditosMes;
+    
+    @Column(name = "debitos_mes")
     private Double debitosMes;
     private Double interurbano;
+    
+    @Column(name = "debito_ano_anterior")
     private Double debitoAnoAnterior;
+    
+    @Column(name = "jornal_revista")
     private Double jornalRevista;
 
-    public Balancete(Long ID, Date dataInicial, Date dataFinal, Double cotaMensal, Double creditos, Double outros1, Double anoAnterior, Double debitos, Double bolsaEstagio, Double passagens, Double telefoneFixo, Double xerox, Double correio, Double materialExpediente, Double diarias, Double gratificacao, Double outros2, Double selos, Double servicos, Double telefoneMovel, Double cursos, Double carimbos, Double saldoAnterior, Double saldoAcumulado, Double creditosMes, Double debitosMes, Double interurbano, Double debitoAnoAnterior, Double jornalRevista) {
-        this.ID = ID;
+    public Balancete(Long id, Date dataInicial, Date dataFinal, Double cotaMensal, Double creditos, Double outros1, Double anoAnterior, Double debitos, Double bolsaEstagio, Double passagens, Double telefoneFixo, Double xerox, Double correio, Double materialExpediente, Double diarias, Double gratificacao, Double outros2, Double selos, Double servicos, Double telefoneMovel, Double cursos, Double carimbos, Double saldoAnterior, Double saldoAcumulado, Double creditosMes, Double debitosMes, Double interurbano, Double debitoAnoAnterior, Double jornalRevista) {
+        this.id = id;
         this.dataInicial = dataInicial;
         this.dataFinal = dataFinal;
         this.cotaMensal = cotaMensal;
@@ -89,14 +113,12 @@ public class Balancete {
     public Balancete() {
     }
     
-    
-
-    public Long getID() {
-        return ID;
+    public Long getId() {
+        return id;
     }
 
-    public void setID(Long ID) {
-        this.ID = ID;
+    public void setID(Long Id) {
+        this.id = id;
     }
 
     public Date getDataInicial() {
