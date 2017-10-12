@@ -30,7 +30,7 @@ public class Leitura {
         //como ler através da contagem de linhas?:
         //String line22 = Files.readAllLines(Paths.get("/Volumes/Macintosh_HD/tiagomeurer/Desktop/test.txt")).get(21);
         //inserir o caminho do arquivo .txt no disco
-        String caminho = "/Volumes/Macintosh_HD/Users/tiagomeurer/Desktop/test.txt";
+        String caminho = "src/java/br/senac/donc/util/balanceteTXT.txt";
 
         System.out.printf("\nConteúdo do arquivo extraido do .txt:\n");
         try {
