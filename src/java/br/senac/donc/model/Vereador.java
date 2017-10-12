@@ -55,6 +55,10 @@ public class Vereador {
 
     public Vereador() {
     }
+    
+    public Vereador(String nome) {
+        this.nomeCompleto = nome;
+    }
 
     public String getNomeCompleto() {
         return nomeCompleto;
@@ -170,10 +174,6 @@ public class Vereador {
 
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     @Override

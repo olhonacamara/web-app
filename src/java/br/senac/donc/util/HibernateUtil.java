@@ -1,5 +1,6 @@
 package br.senac.donc.util;
 
+import br.senac.donc.model.Balancete;
 import br.senac.donc.model.Vereador;
 import org.hibernate.Session;
 import org.hibernate.cfg.AnnotationConfiguration;
@@ -23,7 +24,7 @@ public class HibernateUtil {
         try {
             Configuration cfg = new Configuration();
             cfg.addAnnotatedClass(Vereador.class);
-            
+            cfg.addAnnotatedClass(Balancete.class);
             cfg.configure("/br/senac/donc/util/hibernate.cfg.xml");
              
             ServiceRegistryBuilder build = new ServiceRegistryBuilder().applySettings(cfg.getProperties());

@@ -24,6 +24,7 @@ public class Leitura {
 
         Balancete balancete = new Balancete();
         Vereador vereador = new Vereador();
+        
         int cont = 0;
         int contVereador = 0;
 
@@ -31,10 +32,12 @@ public class Leitura {
         //String line22 = Files.readAllLines(Paths.get("/Volumes/Macintosh_HD/tiagomeurer/Desktop/test.txt")).get(21);
         //inserir o caminho do arquivo .txt no disco
         String caminho = "src/java/br/senac/donc/util/balanceteTXT.txt";
-
+        
         System.out.printf("\nConteúdo do arquivo extraido do .txt:\n");
+        
         try {
-            //o objeto arq lê o arquivo .txt
+            
+            //o objeto arq lê o arquivo .txts
             FileReader arq = new FileReader(caminho);
             //aqui ele armazena o conteudo na memoria
             BufferedReader lerArq = new BufferedReader(arq);
@@ -55,11 +58,15 @@ public class Leitura {
                     }
 
                     //captura do periodo 
+                    // Padrão MySQL AAAA/MM/DD
                     {
                         if (linha.equals("Período :")) {
 
+                            
                             String dataInicialString = lerArq.readLine();
                             String dataFinalString = lerArq.readLine().replace("a", "");
+                            System.out.println("Data Inicial:" + dataInicialString + 
+                                    "\nData Final: " + dataFinalString);
 
                             Date dataInicio = null;
                             Date dataFinal = null;
