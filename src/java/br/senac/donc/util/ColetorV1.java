@@ -5,15 +5,11 @@ import br.senac.donc.model.Vereador;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Scanner;
 
-public class Leitura {
+public class ColetorV1 {
 
     public static void main(String[] args) {
 
@@ -47,6 +43,7 @@ public class Leitura {
                 linha = lerArq.readLine(); // lê da segunda até a última linha
 
                 if (linha != null) {
+                   
                     if (linha.equals("Vereador :")) {
                         cont++;
                         System.out.println("");
@@ -61,6 +58,9 @@ public class Leitura {
                             Date dataFinal = null;
                             String dataInicial = new String(lerArq.readLine());
                             String dataFim = new String(lerArq.readLine().replace("a", ""));
+                            System.out.println(dataInicial);
+                            System.out.println(dataFim);
+                            
                             SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
                             format.setLenient(false);
                             try {
@@ -377,4 +377,7 @@ public class Leitura {
         Double valorDouble = (Double.parseDouble(valorReplace));
         return valorDouble;
     }
+    
+    
+    
 }
