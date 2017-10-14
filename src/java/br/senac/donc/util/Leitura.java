@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.senac.donc.util;
 
 import br.senac.donc.model.Balancete;
@@ -31,7 +26,7 @@ public class Leitura {
         //como ler através da contagem de linhas?:
         //String line22 = Files.readAllLines(Paths.get("/Volumes/Macintosh_HD/tiagomeurer/Desktop/test.txt")).get(21);
         //inserir o caminho do arquivo .txt no disco
-        String caminho = "src/java/br/senac/donc/util/balanceteTXT.txt";
+        String caminho = "/home/danilosetubal/Devlopment/repositories/olho-na-camara/falcon/sggp_julho_2017_0.txt";
 //        String caminho = "/Volumes/Macintosh_HD/Users/tiagomeurer/Desktop/test.txt";
         
         System.out.printf("\nConteúdo do arquivo extraido do .txt:\n");

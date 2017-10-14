@@ -18,6 +18,7 @@ public class ExecutaTestes {
             testVereador = new TestesVereador();
             
             Vereador v1 = new Vereador("Danilo Gentil Setúbal");
+            v1.setCorRaca("Branca");
             
            testVereador.salvarVereador(v1);
             
