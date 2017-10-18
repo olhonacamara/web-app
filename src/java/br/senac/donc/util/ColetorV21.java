@@ -73,6 +73,7 @@ public class ColetorV21 {
         
          String linha = null;
          int i = 1;
+         int contVereador = 0;
          
          Balancete balancete = new Balancete();
          
@@ -86,6 +87,7 @@ public class ColetorV21 {
                     lerArquivo.readLine();
                     System.out.println("Vereador: "+ "(" + i++ + ")" + ": " + lerArquivo.readLine());
                 }
+                
                 
                 if (linha.equals("Período :")) {
                             Date dataInicio = null;
