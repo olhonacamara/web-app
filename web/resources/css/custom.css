@@ -1,0 +1,80 @@
+/*!
+ * Start Bootstrap - Round About (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.img-center {
+	margin: 0 auto;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.navbar-inverse {
+    background-color: #d5dce3;
+    border-color: #22375b;
+    border-style: solid;
+    border-bottom-width: 2px;
+}
+
+.navbar-nav {
+    text-align: right;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.title-project {
+    position: absolute;
+    margin-top: 55px;
+    margin-left: 90px;
+}
+
+.chart-container {
+    margin-top: 70px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #22375b;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+}
+
+.navbar-inverse .navbar-nav>li:hover {
+    background: #22375b;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #22375b;
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: #d5dce3;
+}
+
+.content-container {
+    margin-top: 10px;
+}
+
+.label-default {
+    color: #22375b;
+    background-color: #FFF;
+    border: solid #22375b 1px;
+}
+
+.descricao {
+    color: #777;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.index-content-container {
+    margin-top: 150px;
+}

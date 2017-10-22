@@ -22,8 +22,11 @@ public class ColetorV212 {
 
         int contVereador = 0;
 
+        // 
+        // /Volumes/Macintosh_HD/Users/tiagomeurer/code/DONC/
+        
         // Caminho completo do diretório onde estão os relatórios .txt
-        String pathRelatorios = "/Volumes/Macintosh_HD/Users/tiagomeurer/code/DONC/"
+        String pathRelatorios = "/home/danilosetubal/Devlopment/repositories/olho-na-camara/"
                 + "web-app/src/java/br/senac/donc/util/relatorios/2017/";
 
         File f = null;

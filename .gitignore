@@ -35,3 +35,4 @@ lib/.DS_Store
 hs_err_pid*
 /build/
 /nbproject/private/
+/dist/
