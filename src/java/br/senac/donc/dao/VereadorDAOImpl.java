@@ -31,9 +31,9 @@ public class VereadorDAOImpl extends BaseDAOImpl<Vereador, Long>
 
     }
     
-    public static void main(String[] args) {
-        VereadorDAOImpl vereadorDao = new VereadorDAOImpl();
-        System.out.println(vereadorDao.pesquisaVereadorId("AFRÂNIO TADEU BOPPRÉ", HibernateUtil.abrirSessao()));
-    }
+//    public static void main(String[] args) {
+//        VereadorDAOImpl vereadorDao = new VereadorDAOImpl();
+//        System.out.println(vereadorDao.pesquisaVereadorId("AFRÂNIO TADEU BOPPRÉ", HibernateUtil.abrirSessao()));
+//    }
 
 }
