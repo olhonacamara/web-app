@@ -27,8 +27,8 @@ public class ColetorV23 {
         //
 
         // Caminho completo do diretório onde estão os relatórios .txt
-        String pathRelatorios = "/home/danilosetubal/Devlopment/repositories/olho-na-camara/"
-                + "web-app/src/java/br/senac/donc/util/relatorios/2017/";
+        String pathRelatorios = "/Volumes/Macintosh_HD/Users/tiagomeurer/code/Netbeans/web-app/src/"
+                + "java/br/senac/donc/util/relatorios/2017/";
 
         File f = null;
         String[] paths;
@@ -91,14 +91,14 @@ public class ColetorV23 {
                 if (linha.equals("Vereador :")) {
                     lerArquivo.readLine();
                     linha = lerArquivo.readLine();
-//                    if (contVereador > 0) {
-//                        VereadorDAO vereadorDAO = new VereadorDAOImpl();
-//                        Long id = vereadorDAO.pesquisaVereadorId(linha, session);
-//                        balancete = new Balancete();
-//                        balancete.setVereador(new Vereador());
-//                        balancete.getVereador().setId(id);
-//                    }                    
-//                    System.out.println("Vereador: " + "(" + i++ + ")" + ": " + lerArquivo.readLine());
+                    if (contVereador > 0) {
+                        VereadorDAO vereadorDAO = new VereadorDAOImpl();
+                        Long id = vereadorDAO.pesquisaVereadorId(linha, session);
+                        balancete = new Balancete();
+                        balancete.setVereador(new Vereador());
+                        balancete.getVereador().setId(id);
+                    }                    
+                    System.out.println("Vereador: " + "(" + i++ + ")" + ": " + lerArquivo.readLine());
                     contVereador++;
                 } else if (linha.equals("Período :")) {
                     Date dataInicio = null;
