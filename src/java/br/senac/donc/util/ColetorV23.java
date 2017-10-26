@@ -27,8 +27,8 @@ public class ColetorV23 {
         //
 
         // Caminho completo do diretório onde estão os relatórios .txt
-        String pathRelatorios = "/home/danilosetubal/Devlopment/repositories/olho-na-camara/"
-                + "web-app/src/java/br/senac/donc/util/relatorios/2017/";
+        String pathRelatorios = "/Volumes/Macintosh_HD/Users/tiagomeurer/code/Netbeans/web-app/src/"
+                + "java/br/senac/donc/util/relatorios/2017/";
 
         File f = null;
         String[] paths;
@@ -39,7 +39,6 @@ public class ColetorV23 {
 
             // Percorre todos os arquivos contidos no diretório.
             for (String pathFile : paths) {
-                if (!pathFile.equals(".DS_Store")) {
                     FileReader arquivo = new FileReader(pathRelatorios + pathFile);
                     BufferedReader lerArquivo = new BufferedReader(arquivo);
 
@@ -51,11 +50,7 @@ public class ColetorV23 {
                             + "#################");
 
                     colector(arquivo, lerArquivo);
-
                     arquivo.close();
-
-                }
-
             }
         } catch (IOException e) {
             System.out.println("O caminho especificado não contém arquivos disponiveis e/ou está incorreto."
@@ -76,6 +71,7 @@ public class ColetorV23 {
         String linha = null;
         int i = 1;
         int contVereador = 0;
+        int contPage = 0;
 
         BalanceteDAOImpl balanceteDao = new BalanceteDAOImpl();
 
@@ -90,15 +86,15 @@ public class ColetorV23 {
                 // Lê e coleta o nome do vereador.
                 if (linha.equals("Vereador :")) {
                     lerArquivo.readLine();
-                    linha = lerArquivo.readLine();
-//                    if (contVereador > 0) {
-//                        VereadorDAO vereadorDAO = new VereadorDAOImpl();
-//                        Long id = vereadorDAO.pesquisaVereadorId(linha, session);
-//                        balancete = new Balancete();
-//                        balancete.setVereador(new Vereador());
-//                        balancete.getVereador().setId(id);
-//                    }                    
-//                    System.out.println("Vereador: " + "(" + i++ + ")" + ": " + lerArquivo.readLine());
+                    linha = lerArquivo.readLine().toUpperCase();
+                    if (contVereador > 0) {
+                        VereadorDAO vereadorDAO = new VereadorDAOImpl();
+                        Long id = vereadorDAO.pesquisaVereadorId(linha, session);
+                        balancete = new Balancete();
+                        balancete.setVereador(new Vereador());
+                        balancete.getVereador().setId(id);
+                    }                    
+                    System.out.println("Vereador: " + "(" + i++ + ")" + ": " + linha);
                     contVereador++;
                 } else if (linha.equals("Período :")) {
                     Date dataInicio = null;
@@ -313,7 +309,10 @@ public class ColetorV23 {
                     balancete.setDebitosMes(debitosMesDouble = replaceDouble(debitosMes));
                     System.out.println("Valor capturado de Debitos Mês: " + balancete.getDebitosMes());
                 } else if (linha.equals("AltoQi Tecnologia em  Informática LtdaCÂMARA MUNICIPAL DE FLORIANÓPOLIS")) {
+                    contPage++;
+                    if(contPage%2==0){
                     balanceteDao.salvarOuAlterar(balancete, session);
+                    }
                 }
 
             }
