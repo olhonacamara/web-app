@@ -1,5 +1,6 @@
 package br.senac.donc.util;
 
+import br.senac.donc.dao.BalanceteDAO;
 import br.senac.donc.dao.BalanceteDAOImpl;
 import br.senac.donc.dao.VereadorDAO;
 import br.senac.donc.dao.VereadorDAOImpl;
@@ -24,10 +25,12 @@ public class ColetorV23 {
 
         int contVereador = 0;
         
-        //
+        // /Volumes/Macintosh_HD/Users/tiagomeurer/code/Netbeans/web-app/src/
 
+        
+        
         // Caminho completo do diretório onde estão os relatórios .txt
-        String pathRelatorios = "/Volumes/Macintosh_HD/Users/tiagomeurer/code/Netbeans/web-app/src/"
+        String pathRelatorios = "/home/danilosetubal/Devlopment/repositories/olho-na-camara/web-app/src/"
                 + "java/br/senac/donc/util/relatorios/2017/";
 
         File f = null;
@@ -73,13 +76,14 @@ public class ColetorV23 {
         int contVereador = 0;
         int contPage = 0;
 
-        BalanceteDAOImpl balanceteDao = new BalanceteDAOImpl();
+        BalanceteDAO balanceteDao = new BalanceteDAOImpl();
 
         Balancete balancete = new Balancete();
 
         do {
 
             linha = lerArquivo.readLine();
+            
 
             if (linha != null) {
 
@@ -87,13 +91,13 @@ public class ColetorV23 {
                 if (linha.equals("Vereador :")) {
                     lerArquivo.readLine();
                     linha = lerArquivo.readLine().toUpperCase();
-                    if (contVereador > 0) {
+//                    if (contVereador > 0) {
                         VereadorDAO vereadorDAO = new VereadorDAOImpl();
                         Long id = vereadorDAO.pesquisaVereadorId(linha, session);
-                        balancete = new Balancete();
+                      //  balancete = new Balancete();
                         balancete.setVereador(new Vereador());
                         balancete.getVereador().setId(id);
-                    }                    
+//                    }                    
                     System.out.println("Vereador: " + "(" + i++ + ")" + ": " + linha);
                     contVereador++;
                 } else if (linha.equals("Período :")) {
@@ -113,6 +117,9 @@ public class ColetorV23 {
                     balancete.setDataFinal(dataFinal);
                     balancete.setDataInicial(dataInicio);
 
+                    
+                    // REFATORAR COM SWITCH
+                    
                     System.out.println("Capturou o perido de "
                             + dataInicial + " à " + dataFim);
                 } else if (linha.equals("Mês")) {
@@ -121,6 +128,9 @@ public class ColetorV23 {
                     Double creditosDouble = (Double.parseDouble(cota));
                     balancete.setCreditos(creditosDouble);
                     System.out.println("Valor capturado de CREDITOS: " + balancete.getCotaMensal());
+                    
+                    // VERIFICAR PROBLEMA GASTO OUTROS DUPLICADO
+                    
                 } else if (linha.equals("OUTROS")) {
                     String outros = lerArquivo.readLine();
                     outros = outros.replace(",", "");

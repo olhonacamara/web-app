@@ -194,8 +194,15 @@ public class Vereador {
     public void setId(Long id) {
         this.id = id;
     }
-  
-    
+
+    public List<Balancete> getBalancetes() {
+        return balancetes;
+    }
+
+    public void setBalancetes(List<Balancete> balancetes) {
+        this.balancetes = balancetes;
+    }
+      
 
     @Override
     public String toString() {
