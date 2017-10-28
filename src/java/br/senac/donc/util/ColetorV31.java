@@ -18,7 +18,7 @@ import org.hibernate.Session;
 
 /* Classe responsável por coletar os dados de gastos dos vereadores dos arquivos
 /* de texto previamente convertidos pelo Falcon e armazená-los no banco de dados. */
-public class ColetorV3 {
+public class ColetorV31 {
 
     public static void main(String[] args) {
 
@@ -124,47 +124,9 @@ public class ColetorV3 {
                                 + dataInicial + " à " + dataFim);
                         break;
                         
-//                    case "COTA MENSAL":
-//                        lerArquivo.readLine();
-//                        String cotaMensal = lerArquivo.readLine();
-//                        cotaMensal = cotaMensal.replace(",", "");
-//                        Double cotaMensalDouble = (Double.parseDouble(cotaMensal));
-//                        balancete.setCotaMensal(cotaMensalDouble);
-//                        System.out.println("Valor capturado de COTA MENSAL: " + balancete.getCotaMensal());
-//                        break;
-                        
-                    // TODO
-                    case "OUTROS":
+                    // Bolsa / Estágio - OK
+                    case "DEBITOS":
                         lerArquivo.readLine();
-                        String outros = lerArquivo.readLine();
-                        outros = outros.replace(",", "");
-                        Double outrosDouble = (Double.parseDouble(outros));
-                        balancete.setOutros1(outrosDouble);
-                        System.out.println("Valor capturado de OUTROS (1): " + balancete.getOutros1());
-                        totalDebitos.add(balancete.getOutros1());                      
-                        break;
-                        
-                    case "2.09":
-                        lerArquivo.readLine();
-                        lerArquivo.readLine();
-                        String outros2 = lerArquivo.readLine();
-                        outros2 = outros2.replace(",", "");
-                        Double outros2Double = (Double.parseDouble(outros2));
-                        balancete.setOutros2(outros2Double);
-                        System.out.println("Valor capturado de OUTROS (2): " + balancete.getOutros2());
-                        totalDebitos.add(balancete.getOutros2());
-                        break;
-
-//                    case "Credito ano anterior":
-//                        lerArquivo.readLine();
-//                        String anoAnterior = lerArquivo.readLine();
-//                        anoAnterior = anoAnterior.replace(",", "");
-//                        Double anoAnteriorDouble = (Double.parseDouble(anoAnterior));
-//                        balancete.setAnoAnterior(anoAnteriorDouble);
-//                        System.out.println("Valor capturado de CREDITO DE ANO ANTERIOR: " + balancete.getAnoAnterior());
-//                        break;
-
-                    case "Bolsa / Estágio":
                         lerArquivo.readLine();
                         String bolsaEstagio = lerArquivo.readLine();
                         bolsaEstagio = bolsaEstagio.replace(",", "");
@@ -174,7 +136,9 @@ public class ColetorV3 {
                         totalDebitos.add(balancete.getBolsaEstagio());
                         break;
 
-                    case "Passagens":
+                    // Passagens - OK
+                    case "Bolsa / Estágio":
+                        lerArquivo.readLine();
                         lerArquivo.readLine();
                         String passagens = lerArquivo.readLine();
                         passagens = passagens.replace(",", "");
@@ -184,7 +148,9 @@ public class ColetorV3 {
                         totalDebitos.add(balancete.getPassagens());
                         break;
 
-                    case "Telefone Fixo (GVT)":
+                    // Telefone Fixo GVT - OK
+                    case "Passagens":
+                        lerArquivo.readLine();
                         lerArquivo.readLine();
                         String telefoneFixo = lerArquivo.readLine();
                         telefoneFixo = telefoneFixo.replace(",", "");
@@ -194,7 +160,8 @@ public class ColetorV3 {
                         totalDebitos.add(balancete.getTelefoneFixo());
                         break;
 
-                    case "Xerox":
+                    // Xerox - OK
+                    case "Telefone Fixo (GVT)":
                         lerArquivo.readLine();
                         lerArquivo.readLine();
                         String xerox = lerArquivo.readLine();
@@ -205,7 +172,9 @@ public class ColetorV3 {
                         totalDebitos.add(balancete.getXerox());
                         break;
 
-                    case "Correio":
+                    // Correio - OK
+                    case "Xerox":
+                        lerArquivo.readLine();
                         lerArquivo.readLine();
                         String correio = lerArquivo.readLine();
                         correio = correio.replace(",", "");
@@ -215,7 +184,9 @@ public class ColetorV3 {
                         totalDebitos.add(balancete.getCorreio());
                         break;
 
-                    case "Material de Expediente":
+                    // Material de Expediente - OK    
+                    case "Correio":
+                        lerArquivo.readLine();
                         lerArquivo.readLine();
                         String materialExpediente = lerArquivo.readLine();
                         materialExpediente = materialExpediente.replace(",", "");
@@ -225,7 +196,8 @@ public class ColetorV3 {
                         totalDebitos.add(balancete.getMaterialExpediente());
                         break;
 
-                    case "Diárias":
+                    // Diárias - OK    
+                    case "Material de Expediente":
                         lerArquivo.readLine();
                         lerArquivo.readLine();
                         String diarias = lerArquivo.readLine();
@@ -236,16 +208,22 @@ public class ColetorV3 {
                         totalDebitos.add(balancete.getDiarias());
                         break;
 
-//                    case "Gratificação":
-//                        lerArquivo.readLine();
-//                        String gratificacao = lerArquivo.readLine();
-//                        gratificacao = gratificacao.replace(",", "");
-//                        Double gratificacaoDouble = (Double.parseDouble(gratificacao));
-//                        balancete.setGratificacao(gratificacaoDouble);
-//                        System.out.println("Valor capturado de GRATIFICAÇÃO: " + balancete.getGratificacao());
-//                        break;
-
-                    case "Selos":
+                        
+                     // Outros - OK
+                    case "Gratificação":
+                        lerArquivo.readLine();
+                        lerArquivo.readLine();
+                        String outros = lerArquivo.readLine();
+                        outros = outros.replace(",", "");
+                        Double outrosDouble = (Double.parseDouble(outros));
+                        balancete.setOutros1(outrosDouble);
+                        System.out.println("Valor capturado de OUTROS (1): " + balancete.getOutros1());
+                        totalDebitos.add(balancete.getOutros1());                      
+                        break;
+                        
+                     // Selos - OK
+                    case "OUTROS":
+                        lerArquivo.readLine();
                         lerArquivo.readLine();
                         String selos = lerArquivo.readLine();
                         selos = selos.replace(",", "");
@@ -255,7 +233,8 @@ public class ColetorV3 {
                         totalDebitos.add(balancete.getSelos());
                         break;
 
-                    case "Serviços":
+                    // Servioçs - OK
+                    case "Selos":
                         lerArquivo.readLine();
                         lerArquivo.readLine();
                         String servicos = lerArquivo.readLine();
@@ -312,16 +291,6 @@ public class ColetorV3 {
                         i = i++;
                         break;
 
-//                    case "Débito ano anterior":
-//                        lerArquivo.readLine();
-//                        lerArquivo.readLine();
-//                        String debitoAnoAnterior = lerArquivo.readLine();
-//                        debitoAnoAnterior = debitoAnoAnterior.replace(",", "");
-//                        Double debitoAnoAnteriorDouble = (Double.parseDouble(debitoAnoAnterior));
-//                        balancete.setDebitoAnoAnterior(debitoAnoAnteriorDouble);
-//                        System.out.println("Valor capturado de Débito ano anterior: " + balancete.getDebitoAnoAnterior());
-//                        break;
-
                     case "Jornal / Revista":
                         lerArquivo.readLine();
                         String jornalRevista = lerArquivo.readLine();
@@ -331,35 +300,6 @@ public class ColetorV3 {
                         System.out.println("Valor capturado de Jornal/Revista: " + balancete.getJornalRevista());
                         totalDebitos.add(balancete.getJornalRevista());
                         break;
-
-//                    case "Saldo Anterior :":
-//                        String saldoAnterior = lerArquivo.readLine();
-//                        Double saldoAnteriorDouble;
-//                        balancete.setAnoAnterior(saldoAnteriorDouble = replaceDouble(saldoAnterior));
-//                        System.out.println("Valor capturado de Saldo anterior: " + balancete.getAnoAnterior());
-//                        break;
-//
-//                    case "Saldo Acumulado:":
-//                        String saldoAcumulado = lerArquivo.readLine();
-//                        Double saldoAcumuladoDouble;
-//                        balancete.setSaldoAcumulado(saldoAcumuladoDouble = replaceDouble(saldoAcumulado));
-//                        System.out.println("Valor capturado de Saldo Acumulado: " + balancete.getSaldoAcumulado());
-//                        break;
-//
-//                    case "Créditos no Mês :":
-//                        lerArquivo.readLine();
-//                        String creditosMes = lerArquivo.readLine();
-//                        Double creditosMesDouble;
-//                        balancete.setCreditosMes(creditosMesDouble = replaceDouble(creditosMes));
-//                        System.out.println("Valor capturado de Creditos Mês: " + balancete.getCreditosMes());
-//                        break;
-
-//                    case "Débitos no Mês :":
-//                        String debitosMes = lerArquivo.readLine();
-//                        Double debitosMesDouble;
-//                        balancete.setDebitosMes(debitosMesDouble = replaceDouble(debitosMes));
-//                        System.out.println("Valor capturado de Debitos Mês: " + balancete.getDebitosMes());
-//                        break;
 
                     case "AltoQi Tecnologia em  Informática LtdaCÂMARA MUNICIPAL DE FLORIANÓPOLIS":
                         contPage++;
