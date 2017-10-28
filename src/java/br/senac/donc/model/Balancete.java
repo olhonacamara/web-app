@@ -69,7 +69,7 @@ public class Balancete {
     @Column(name = "creditos_mes")
     private Double creditosMes;
     
-    @Column(name = "debitos_mes")
+    @Column(name = "debitos_mes", precision = 10, scale = 2)
     private Double debitosMes;
     private Double interurbano;
     
