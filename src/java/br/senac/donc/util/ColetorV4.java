@@ -29,6 +29,7 @@ public class ColetorV4 {
         // Caminho completo do diretório onde estão os relatórios .txt
         String pathRelatorios = "/projetos/web-app/src/"
                 + "java/br/senac/donc/util/relatorios/2017/";
+                
 
         File f = null;
         String[] paths;
@@ -57,6 +58,8 @@ public class ColetorV4 {
             }
 
             session.close();
+            System.exit(0);
+
 
         } catch (IOException e) {
             System.out.println("O caminho especificado não contém arquivos disponiveis e/ou está incorreto."
