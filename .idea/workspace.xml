@@ -1,51 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c6c97c9-2059-4dfe-8ed8-4d84db699469" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/gson-2.3.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/javaee-endorsed-api-7.0/javaee-doc-api_1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/javaee-endorsed-api-7.0/javax.annotation-api_1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/javaee-endorsed-api-7.0/javax.xml.soap-api_1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/javaee-endorsed-api-7.0/jaxb-api-osgi_1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/javaee-endorsed-api-7.0/jaxws-api_1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/javaee-endorsed-api-7.0/jsr181-api_1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/app.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/cc.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/cg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/collapse.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/expand.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/background_border_bottom.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/bg_gradient.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/level1_deselect.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/level1_selected-1lvl.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/masthead.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/masthead_link_enabled.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/masthead_link_roll.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/pbdis.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/pbena.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/pbmou.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/pbsel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/pname.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/primary-enabled.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/primary-roll.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/secondary-enabled.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/tbsel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/tbuns.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/item.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/og.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nbproject/rest-build.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css_master-all.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/test-resbeans.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/test-resbeans.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/test-resbeans.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/build-impl.xml" afterPath="$PROJECT_DIR$/nbproject/build-impl.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/genfiles.properties" afterPath="$PROJECT_DIR$/nbproject/genfiles.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/private/private.properties" afterPath="$PROJECT_DIR$/nbproject/private/private.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/private/private.xml" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/project.properties" afterPath="$PROJECT_DIR$/nbproject/project.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/project.xml" afterPath="$PROJECT_DIR$/nbproject/project.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resources/navbar.jsp" afterPath="$PROJECT_DIR$/web/resources/navbar.jsp" />
-    </list>
+    <list default="true" id="3c6c97c9-2059-4dfe-8ed8-4d84db699469" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -62,7 +18,7 @@
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+              <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -72,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/web/resources/navbar.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="589">
-              <caret line="228" column="14" lean-forward="true" selection-start-line="228" selection-start-column="14" selection-end-line="228" selection-end-column="14" />
+              <caret line="228" column="14" lean-forward="false" selection-start-line="228" selection-start-column="14" selection-end-line="228" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -92,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/web/resources/webService.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+              <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -102,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/web/css_master-all.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="153" column="0" lean-forward="true" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+              <caret line="153" column="0" lean-forward="false" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -112,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/web/test-resbeans.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="74" lean-forward="true" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="74" />
+              <caret line="9" column="74" lean-forward="false" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -251,12 +207,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1509447464821</updated>
-      <workItem from="1509447469798" duration="959000" />
+      <workItem from="1509447469798" duration="1554000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="959000" />
+    <option name="totallyTimeSpent" value="1554000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -304,7 +260,7 @@
     <entry file="file://$PROJECT_DIR$/web/test-resbeans.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="74" lean-forward="true" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="74" />
+          <caret line="9" column="74" lean-forward="false" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="74" />
           <folding />
         </state>
       </provider>
@@ -312,7 +268,7 @@
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+          <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -336,7 +292,7 @@
     <entry file="file://$PROJECT_DIR$/web/css_master-all.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="153" column="0" lean-forward="true" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+          <caret line="153" column="0" lean-forward="false" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -344,7 +300,7 @@
     <entry file="file://$PROJECT_DIR$/web/resources/navbar.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
-          <caret line="228" column="14" lean-forward="true" selection-start-line="228" selection-start-column="14" selection-end-line="228" selection-end-column="14" />
+          <caret line="228" column="14" lean-forward="false" selection-start-line="228" selection-start-column="14" selection-end-line="228" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -352,7 +308,7 @@
     <entry file="file://$PROJECT_DIR$/web/resources/webService.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="7" />
           <folding />
         </state>
       </provider>

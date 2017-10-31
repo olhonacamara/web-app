@@ -213,10 +213,7 @@
         <a href="#">Rankings</a>
         </li>
         <li>
-        <a href="#">API</a>
-        </li>
-        <li>
-        <a href="webService.html">WebService</a>
+        <a href="http://localhost:8080/web-app/test-resbeans.html">API</a>
         </li>
         <li>
         <a href="#">Sobre</a>
