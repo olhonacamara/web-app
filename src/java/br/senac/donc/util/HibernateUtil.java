@@ -20,6 +20,7 @@ public class HibernateUtil {
     private static final SessionFactory sessionFactory;
     private static Session session;
     
+    
     static {
         try {
             Configuration cfg = new Configuration();

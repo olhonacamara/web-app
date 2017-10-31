@@ -24,10 +24,12 @@ public class ColetorV4 {
 
         int contVereador = 0;
 
-        // /Volumes/Macintosh_HD/Users/tiagomeurer/code/Netbeans/web-app/src/
+        // "/home/danilosetubal/Devlopment/repositories/olho-na-camara/web-app/src/"
+
         // Caminho completo do diretório onde estão os relatórios .txt
-        String pathRelatorios = "/home/danilosetubal/Devlopment/repositories/olho-na-camara/web-app/src/"
+        String pathRelatorios = "/Volumes/Macintosh_HD/Users/tiagomeurer/code/web-app/src/"
                 + "java/br/senac/donc/util/relatorios/2017/";
+                
 
         File f = null;
         String[] paths;
@@ -56,6 +58,8 @@ public class ColetorV4 {
             }
 
             session.close();
+            System.exit(0);
+
 
         } catch (IOException e) {
             System.out.println("O caminho especificado não contém arquivos disponiveis e/ou está incorreto."
