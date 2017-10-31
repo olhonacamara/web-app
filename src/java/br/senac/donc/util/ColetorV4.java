@@ -25,8 +25,9 @@ public class ColetorV4 {
         int contVereador = 0;
 
         // /Volumes/Macintosh_HD/Users/tiagomeurer/code/Netbeans/web-app/src/
+        // /home/danilosetubal/Devlopment/repositories/olho-na-camara/web-app/src/
         // Caminho completo do diretório onde estão os relatórios .txt
-        String pathRelatorios = "/home/danilosetubal/Devlopment/repositories/olho-na-camara/web-app/src/"
+        String pathRelatorios = "/projetos/web-app/src/"
                 + "java/br/senac/donc/util/relatorios/2017/";
 
         File f = null;
@@ -36,7 +37,7 @@ public class ColetorV4 {
             f = new File(pathRelatorios);
             paths = f.list();
 
-            Session session;
+                Session session;
             session = HibernateUtil.abrirSessao();
 
             // Percorre todos os arquivos contidos no diretório.
