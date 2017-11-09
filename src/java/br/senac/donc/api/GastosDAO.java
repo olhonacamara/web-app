@@ -20,33 +20,30 @@ import java.util.logging.Logger;
  */
 public class GastosDAO {
     
-     public List<Balancete> listarGastos() {
-         
-
+     public List<Gasto> listarGastos() {
         
         String sql = 
-           
-                "SELECT VEREADOR.ID, VEREADOR.NOME_COMPLETO"
-                + "FROM VEREADOR"
-                + "INNER JOIN BALANCETES ON VEREADOR.ID = BALANCETES.VEREADOR_ID"
-                + "SELECT BALANCETES.DEBITOS_MES"
-                + "FROM BALANCETES"
-                + "ORDER BY ASC";
-        List<Balancete> retorno = new ArrayList<Balancete>();
+                "select v.id, v.nome_completo, sum(b.debitos_mes) as total," +
+                "avg(b.debitos_mes) as Media_Gastos_Mes FROM vereadores v " +
+                " inner join balancetes b on v.id = b.vereador_id" +
+                " group by nome_completo";
+        List<Gasto> retorno = new ArrayList();
 
+        
+        Gasto gasto;
         PreparedStatement pst = Conexao.getPreparedStatement(sql);
         try {
 
             ResultSet res = pst.executeQuery();
             while (res.next()) {
-                Balancete bal = new Balancete();
-                Vereador ver = new Vereador();
+              gasto = new Gasto();
+               gasto.setMediaGastos(res.getDouble("Media_Gastos_Mes"));
+               gasto.setVereador(res.getString("nome_completo"));
+               gasto.setTotal(res.getDouble("total"));
                
-                bal.setDebitos_mes(res.getDouble("debitos_mes"));
-                ver.setNome_completo(res.getString("nome_completo"));
                 
-                retorno.add(bal);
-               // retorno.add(ver);
+                retorno.add(gasto);
+          
             }
 
         } catch (SQLException ex) {

@@ -1,30 +1,15 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/projetos/web-app/src/java/br/senac/donc/dao/BaseDAOImpl.java</file>
-            <file>file:/D:/projetos/web-app/src/java/br/senac/donc/dao/BalanceteDAOImpl.java</file>
-            <file>file:/D:/projetos/web-app/web/resources/webService.html</file>
+            <file>file:/D:/projetos/web-app/src/java/br/senac/donc/api/ApplicationConfig.java</file>
+            <file>file:/D:/projetos/web-app/src/java/br/senac/donc/api/WsResource.java</file>
             <file>file:/D:/projetos/web-app/src/java/br/senac/donc/util/ColetorV4.java</file>
-            <file>file:/D:/projetos/web-app/src/java/br/senac/donc/util/hibernate.cfg.xml</file>
-            <file>file:/D:/projetos/web-app/src/java/br/senac/donc/dao/BalanceteDAO.java</file>
-            <file>file:/D:/projetos/web-app/src/java/br/senac/donc/model/Balancete.java</file>
+            <file>file:/D:/projetos/web-app/nbproject/build-impl.xml</file>
+            <file>file:/D:/projetos/web-app/web/resources/navbar.jsp</file>
+            <file>file:/D:/projetos/web-app/web/api.html</file>
             <file>file:/D:/projetos/web-app/src/java/br/senac/donc/util/HibernateUtil.java</file>
         </group>
     </open-files>
 </project-private>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/Volumes/Macintosh_HD/Users/tiagomeurer/code/Netbeans/web-app/src/java/br/senac/donc/util/relatorios/2017/sggp_-_fevereiro_2017.txt</file>
-            <file>file:/Volumes/Macintosh_HD/Users/tiagomeurer/code/Netbeans/web-app/src/java/br/senac/donc/dao/VereadorDAOImpl.java</file>
-            <file>file:/Volumes/Macintosh_HD/Users/tiagomeurer/code/Netbeans/web-app/src/java/br/senac/donc/dao/BaseDAOImpl.java</file>
-        </group>
-    </open-files>
-</project-private>
->>>>>>> b4d36b631d7f6e9ebfe8984681f6bb27a9da3797

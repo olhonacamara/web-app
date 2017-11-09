@@ -33,17 +33,17 @@ public class BalanceteDAO {
                 item.setBolsa_estagio(res.getDouble("bolsa_estagio"));
                 item.setCarimbos(res.getDouble("carimbos"));
                 item.setCorreio(res.getDouble("correio"));
-                /*   item.setCota_mensal(res.getDouble("cota_mensal"));
-                item.setCreditos(res.getDouble("creditos"));
+                 item.setCota_mensal(res.getDouble("cota_mensal"));
+               item.setCreditos(res.getDouble("creditos"));
                 item.setCreditos_mes(res.getDouble("creditos_mes"));
-                item.setCursos(res.getDouble("cursos"));
-                item.setDataFinal(res.getDate("data_final"));
+              item.setCursos(res.getDouble("cursos"));
+                item.setDataFinal(res.getDate("dataFinal"));
                 item.setDataInicial(res.getDate("dataInicial"));
                 item.setDebito_ano_anterior(res.getDouble("debito_ano_anterior"));
                 item.setDebitos(res.getDouble("debitos"));
                 item.setDebitos_mes(res.getDouble("debitos_mes"));
-                item.setDiarias(res.getDouble("diarias"));
-                item.setGratificacao(res.getDouble("gratificacao"));
+               item.setDiarias(res.getDouble("diarias"));
+             item.setGratificacao(res.getDouble("gratificacao"));
                 item.setInterurbano(res.getDouble("interurbano"));
                 item.setJornal_revista(res.getDouble("jornal_revista"));
                 item.setMaterial_expediente(res.getDouble("material_expediente"));
@@ -56,7 +56,7 @@ public class BalanceteDAO {
                 item.setServicos(res.getDouble("servicos"));
                 item.setTelefone_fixo(res.getDouble("telefone_fixo"));
                 item.setTelefone_movel(res.getDouble("telefone_movel"));
-                item.setXerox(res.getDouble("xerox"));*/
+                item.setXerox(res.getDouble("xerox"));
                 item.setVereador_id(res.getInt("vereador_id"));
 
                 retorno.add(item);
