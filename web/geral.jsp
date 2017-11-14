@@ -1,6 +1,4 @@
-
     <jsp:include page="resources/navbar.jsp" />
-
     <!-- Page Content -->
     <div class="container">
 
@@ -232,4 +230,3 @@
         <hr>
 
             <jsp:include page="resources/footer.jsp" />
-

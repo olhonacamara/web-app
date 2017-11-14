@@ -6,7 +6,9 @@
             <file>file:/D:/projetos/web-app/src/java/br/senac/donc/api/ApplicationConfig.java</file>
             <file>file:/D:/projetos/web-app/src/java/br/senac/donc/api/WsResource.java</file>
             <file>file:/D:/projetos/web-app/src/java/br/senac/donc/util/ColetorV4.java</file>
+            <file>file:/D:/projetos/web-app/src/java/br/senac/donc/api/GastosDAO.java</file>
             <file>file:/D:/projetos/web-app/nbproject/build-impl.xml</file>
+            <file>file:/D:/projetos/web-app/src/java/br/senac/donc/api/Gasto.java</file>
             <file>file:/D:/projetos/web-app/web/resources/navbar.jsp</file>
             <file>file:/D:/projetos/web-app/web/api.html</file>
             <file>file:/D:/projetos/web-app/src/java/br/senac/donc/util/HibernateUtil.java</file>

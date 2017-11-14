@@ -5,7 +5,6 @@
  */
 package br.senac.donc.api;
 
-
 import com.google.gson.Gson;
 import java.util.List;
 import javax.ws.rs.core.Context;
@@ -35,7 +34,9 @@ public class WsResource {
     }
 
     /**
-     * Retrieves representation of an instance of br.senac.donc.webService.WsResource
+     * Retrieves representation of an instance of
+     * br.senac.donc.webService.WsResource
+     *
      * @return an instance of java.lang.String
      */
     @GET
@@ -44,7 +45,8 @@ public class WsResource {
         //TODO return proper representation object
         throw new UnsupportedOperationException();
     }
-     @GET
+
+    @GET
     @Path("vereador/list")
     @Produces(MediaType.APPLICATION_JSON)
     public String listVereador() {
@@ -54,11 +56,11 @@ public class WsResource {
         lista = dao.listar();
 
         //converter para Json
-         Gson g = new Gson();
+        Gson g = new Gson();
         return g.toJson(lista);
 
     }
-    
+
     //recall tens que usar lista vereadores;
     //precisa comecar com lista vereadores;
     @GET
@@ -75,6 +77,7 @@ public class WsResource {
         return g.toJson(lista);
 
     }
+
     @GET
     @Path("gastos_vereador/list")
     @Produces(MediaType.APPLICATION_JSON)
@@ -84,14 +87,28 @@ public class WsResource {
         GastosDAO dao = new GastosDAO();
         lista = dao.listarGastos();
 
-        System.out.println("########################################### "+lista);
+        System.out.println("########################################### " + lista);
         Gson g = new Gson();
         return g.toJson(lista);
 
     }
 
+    @GET
+    @Path("TotalGastosMes/list")
+    @Produces(MediaType.APPLICATION_JSON)
+    public String listarGastos2() {
+        List<GastoM> lista;
+
+        GastosMDAO dao = new GastosMDAO();
+        lista = dao.listarGastos2();
+
+        Gson g = new Gson();
+        return g.toJson(lista);
+    }
+
     /**
      * PUT method for updating or creating an instance of WsResource
+     *
      * @param content representation for the resource
      */
     @PUT

@@ -23,10 +23,10 @@ public class GastosDAO {
      public List<Gasto> listarGastos() {
         
         String sql = 
-                "select v.id, v.nome_completo, sum(b.debitos_mes) as total," +
-                "avg(b.debitos_mes) as Media_Gastos_Mes FROM vereadores v " +
-                " inner join balancetes b on v.id = b.vereador_id" +
-                " group by nome_completo";
+                    "select v.id, v.nome_completo, sum(b.debitos_mes) as total," +
+                    "avg(b.debitos_mes) as Media_Gastos_Mes FROM vereadores v " +
+                    " inner join balancetes b on v.id = b.vereador_id" +
+                    " group by nome_completo";
         List<Gasto> retorno = new ArrayList();
 
         
@@ -40,6 +40,7 @@ public class GastosDAO {
                gasto.setMediaGastos(res.getDouble("Media_Gastos_Mes"));
                gasto.setVereador(res.getString("nome_completo"));
                gasto.setTotal(res.getDouble("total"));
+               gasto.setId(res.getInt("id"));
                
                 
                 retorno.add(gasto);

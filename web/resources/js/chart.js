@@ -16,20 +16,31 @@ var options = {
         }
     },
 };
-
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
+/*
+function loadChart(data){
+var ctx = document.getElementById('myChart');
+var myChart = new Chart(canvas, {
     type: 'line',
     options: options,
-    data: {
-        labels: ['Janeiro', 'Fevereiro', 'Marco', 'Abril', 'Maio', 'Junho', 'Julho'],
-        datasets: [{
-            label: 'Gastos em 2017',
-            data: [36890, 87983, 109872, 135237, 170129, 193128, 236439],
-            lineTension: 0,
-            borderColor: '#22375b',
-            fill: true,
-            backGroundColor: '#f1bf45',
-        }]
-    }
-});
+    data: { labels :data.total
+        
+        
+        
+        */
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                        
