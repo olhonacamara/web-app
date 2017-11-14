@@ -19,7 +19,7 @@
                             </h4>
                         </div>
                         <div class="panel-body">
-                            <canvas height="80px" id="myChart"></canvas>
+                            <canvas height="80px" id="geralChart"></canvas>
                         </div>
                     </div>
                 </div>

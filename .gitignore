@@ -2,13 +2,14 @@
 *.class
 
 # Arquivos de configuração Hibernate
-src/java/META-INF/persistence.xml
+# src/java/META-INF/persistence.xml
 
 # Arquivos de configuração do projeto
 # Incluídos no gitignore pois estavam 
 # causando problemas no momento de clonar o projeto
 nbproject/private/private.properties
 nbproject/private/private.xml
+nbproject/project.properties
 
 # Binary files
 .DS_Store
@@ -36,3 +37,4 @@ hs_err_pid*
 /build/
 /nbproject/private/
 /dist/
+
