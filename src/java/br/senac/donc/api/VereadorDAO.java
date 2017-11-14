@@ -114,7 +114,7 @@ public class VereadorDAO {
                 item.setCor_raca(res.getString("cor_raca"));
                 item.setData_nascimento(res.getDate("data_nascimento"));
                 SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-                
+               
                 item.setEmail(res.getString("email"));
                 item.setFim_mandato(res.getDate("fim_mandato"));
                 item.setFoto(res.getString("foto")); // retorna url da imagem

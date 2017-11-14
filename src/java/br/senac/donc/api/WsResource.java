@@ -58,6 +58,9 @@ public class WsResource {
         return g.toJson(lista);
 
     }
+    
+    //recall tens que usar lista vereadores;
+    //precisa comecar com lista vereadores;
     @GET
     @Path("balancete/list")
     @Produces(MediaType.APPLICATION_JSON)
@@ -76,12 +79,12 @@ public class WsResource {
     @Path("gastos_vereador/list")
     @Produces(MediaType.APPLICATION_JSON)
     public String listGastos() {
-        List<Balancete> lista;
+        List<Gasto> lista;
 
         GastosDAO dao = new GastosDAO();
         lista = dao.listarGastos();
 
-        //converter para Json
+        System.out.println("########################################### "+lista);
         Gson g = new Gson();
         return g.toJson(lista);
 
