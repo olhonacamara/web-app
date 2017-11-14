@@ -17,8 +17,8 @@ var options = {
     },
 };
 
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
+var ctx = document.getElementById('geralChart').getContext('2d');
+var geralChart = new Chart(ctx, {
     type: 'line',
     options: options,
     data: {
@@ -33,3 +33,28 @@ var myChart = new Chart(ctx, {
         }]
     }
 });
+
+buscarDados(12);
+loadData();
+
+function buscarDados(p1) {
+    alert(p1)
+}
+
+function loadData(){
+    
+        var xhttp = new XMLHttpRequest();
+        
+        xhttp.onreadystatechange = function(){
+            if(this.readyState == 4 && this.status == 200){
+                console.log((JSON.parse(this.responseText)));
+                var jsonData = JSON.parse(this.responseText);
+                
+                console.log(jsonData[0].vereador + " - " + jsonData[0].mediaGastos);
+            }
+        }
+        xhttp.open('GET','http://localhost:8080/web-app/webresources/ws/gastos_vereador/list', true);
+        xhttp.send();
+    }
+    loadData();
+
