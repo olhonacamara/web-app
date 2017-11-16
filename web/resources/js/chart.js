@@ -57,4 +57,3 @@ function loadData(){
         xhttp.send();
     }
     loadData();
-
