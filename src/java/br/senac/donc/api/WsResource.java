@@ -93,18 +93,7 @@ public class WsResource {
 
     }
 
-    @GET
-    @Path("TotalGastosMes/list")
-    @Produces(MediaType.APPLICATION_JSON)
-    public String listarGastos2() {
-        List<GastoM> lista;
-
-        GastosMDAO dao = new GastosMDAO();
-        lista = dao.listarGastos2();
-
-        Gson g = new Gson();
-        return g.toJson(lista);
-    }
+   
 
     /**
      * PUT method for updating or creating an instance of WsResource
