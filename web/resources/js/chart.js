@@ -34,13 +34,6 @@ var geralChart = new Chart(ctx, {
     }
 });
 
-buscarDados(12);
-loadData();
-
-function buscarDados(p1) {
-    alert(p1)
-}
-
 function loadData(){
     
         var xhttp = new XMLHttpRequest();

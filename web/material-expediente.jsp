@@ -16,7 +16,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4>
-                                Total de gastos em 2017
+                                Gastos com Material de Expediente em 2017
                                 <i class="fa fa-question-circle" aria-hidden="true"></i>
                                 <br>
                                 <small>
@@ -38,7 +38,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h2 class="page-header">
-                        Ranking Geral de Gastos
+                        Ranking de gastos com Material de Expediente
                         <small>Janeiro a Agosto - 2017</small>
                     </h2>
                     <h4 class="descricao">
@@ -60,7 +60,7 @@
                             <%
             
                                 BalanceteDAOImpl dao = new BalanceteDAOImpl();
-                                List<Ranking> objetos = dao.listaRankingGeral();
+                                List<Ranking> objetos = dao.listarRankingGasto("material_expediente");
                                 
                                 Integer count = 1;
 

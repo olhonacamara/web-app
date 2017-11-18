@@ -12,7 +12,7 @@ package br.senac.donc.model;
 public class Ranking {
         
     private String nome;
-    private Double gasto;
+    private String gasto;
 
     public Ranking() {
     }
@@ -25,11 +25,11 @@ public class Ranking {
         this.nome = nome;
     }
 
-    public Double getGasto() {
+    public String getGasto() {
         return gasto;
     }
 
-    public void setGasto(Double gasto) {
+    public void setGasto(String gasto) {
         this.gasto = gasto;
     }
     
