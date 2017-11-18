@@ -3,15 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/projetos/web-app/src/java/br/senac/donc/api/ApplicationConfig.java</file>
-            <file>file:/D:/projetos/web-app/src/java/br/senac/donc/api/WsResource.java</file>
-            <file>file:/D:/projetos/web-app/src/java/br/senac/donc/util/ColetorV4.java</file>
-            <file>file:/D:/projetos/web-app/src/java/br/senac/donc/api/GastosDAO.java</file>
-            <file>file:/D:/projetos/web-app/nbproject/build-impl.xml</file>
-            <file>file:/D:/projetos/web-app/src/java/br/senac/donc/api/Gasto.java</file>
-            <file>file:/D:/projetos/web-app/web/resources/navbar.jsp</file>
-            <file>file:/D:/projetos/web-app/web/api.html</file>
-            <file>file:/D:/projetos/web-app/src/java/br/senac/donc/util/HibernateUtil.java</file>
+            <file>file:/home/danilosetubal/Devlopment/repositories/olho-na-camara/web-app/web/index.jsp</file>
+            <file>file:/home/danilosetubal/Devlopment/repositories/olho-na-camara/web-app/src/java/br/senac/donc/util/Servlet.java</file>
+            <file>file:/home/danilosetubal/Devlopment/repositories/olho-na-camara/web-app/web/resources/js/chart.js</file>
+            <file>file:/home/danilosetubal/Devlopment/repositories/olho-na-camara/web-app/src/java/br/senac/donc/dao/BalanceteDAOImpl.java</file>
         </group>
     </open-files>
 </project-private>
