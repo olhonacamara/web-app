@@ -1,6 +1,12 @@
-    <jsp:include page="resources/navbar.jsp" />
+    <%@page import="br.senac.donc.model.Vereador"%>
+<%@page import="java.util.List"%>
+<%@page import="br.senac.donc.util.HibernateUtil"%>
+<%@page import="br.senac.donc.dao.VereadorDAOImpl"%>
+<%@page import="br.senac.donc.dao.BalanceteDAOImpl"%>
+<jsp:include page="resources/navbar.jsp" />
     <!-- Page Content -->
     <div class="container">
+        
 
         <!-- Introduction Row -->
         <div class="row">
@@ -25,7 +31,20 @@
                 </div>
             </div>
         </div>
-
+        
+        <%
+            
+            BalanceteDAOImpl daoo = new BalanceteDAOImpl();
+            List<Object> objetos = daoo.listaRanking(HibernateUtil.abrirSessao());
+            
+            for (Object objeto : objetos) {
+                %>
+                <li><%= objeto.toString() %> </li>
+                <%
+            }
+                        
+        %>
+        
         <div class="content-container">
             <!-- Team Members Row -->
             <div class="row">

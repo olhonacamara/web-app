@@ -22,7 +22,8 @@
                 <option value="audi">Ranking - Cursos</option>
                 <option value="audi">Ranking - Carimbos</option>
                 <option value="audi">Ranking - Ligações Interurbano</option>
-                <option value="audi">Ranking - Jornal / Revista</option>        
+                <option value="audi">Ranking - Jornal / Revista</option>
+            </select>
             
         </div>
         
