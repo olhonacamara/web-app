@@ -16,25 +16,25 @@
         %>
 
         <tr>
-
-
-        <span style="font-size: 80px; color: red;"><%= objeto.getSomaTotal()%>
-        </span>
-
+        <div style="font-size: 80px; color: red; text-align: center"><%= objeto.getSomaTotal()%> 
+            <h3 style="color: black">
+                Este é o total gasto pelos vereadores com verba de gabinete desde Janeiro de 2017!!
+            </h3>
+        </div> 
         </tr>
         <%
             }
 
         %>
-        <h3>Este é o total gasto pelos vereadores apenas com verba de gabinete desde Janeiro de 2017!!</h3>
     </div>
-
-    <div>
-        <h3>Selecione um item para visualizar o Ranking de gastos: </h3>
+    
+    <div style = "text-align: center">
+        <h4>Selecione um item abaixo para visualizar o ranking destes gastos: </h4>
 
         <select name="rankings" onchange="location = this.value;">
             <option value="geral.jsp"></option>
             <option value="geral.jsp">Ranking - Geral</option>
+            <option value="partido.jsp">Ranking - Geral por partido</option>
             <option value="bolsa-estagio.jsp">Ranking - Bolsa/Estágios</option>
             <option value="passagens.jsp">Ranking - Passagens</option>
             <option value="telefone-fixo.jsp">Ranking - Telefone Fixo</option>
