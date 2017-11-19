@@ -13,6 +13,8 @@ public class Ranking {
         
     private String nome;
     private String gasto;
+    private String partido;
+    private String somaTotal;
 
     public Ranking() {
     }
@@ -31,6 +33,22 @@ public class Ranking {
 
     public void setGasto(String gasto) {
         this.gasto = gasto;
+    }
+
+    public String getPartido() {
+        return partido;
+    }
+
+    public void setPartido(String partido) {
+        this.partido = partido;
+    }
+
+    public String getSomaTotal() {
+        return somaTotal;
+    }
+
+    public void setSomaTotal(String somaTotal) {
+        this.somaTotal = somaTotal;
     }
     
     

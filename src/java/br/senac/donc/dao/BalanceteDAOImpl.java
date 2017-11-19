@@ -75,6 +75,38 @@ public class BalanceteDAOImpl extends BaseDAOImpl<Balancete, Long>
         return retorno;
     }
     
+        public List<Ranking> exibeSomaGeral() {
+        
+        String sql = "select sum(balancetes.debitos_mes) as soma from balancetes";
+        List<Ranking> retorno = new ArrayList<Ranking>();
+        
+        DecimalFormat df = new DecimalFormat("0.##");
+
+        PreparedStatement pst = Conexao.getPreparedStatement(sql);
+        try {
+
+            ResultSet res = pst.executeQuery();
+            while (res.next()) {
+                Ranking item = new Ranking();
+                              
+                BigDecimal soma = new BigDecimal (res.getDouble("soma"));  
+                NumberFormat nf = NumberFormat.getCurrencyInstance();  
+                String formatado = nf.format (soma);
+                System.out.println(formatado);
+                
+                item.setSomaTotal(formatado);             
+                
+                retorno.add(item);
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(br.senac.donc.api.VereadorDAO.class.getName()).log(Level.SEVERE, null, ex);
+
+        }
+
+        return retorno;
+    }
+    
     public List<Ranking> listarRankingGasto(String nomeGasto) {
         
         String sql = "select vereadores.nome_completo as nome, SUM(balancetes." + nomeGasto + ") as gasto "
