@@ -24,11 +24,13 @@ public class ColetorV4 {
 
         int contVereador = 0;
 
-        // /Volumes/Macintosh_HD/Users/tiagomeurer/code/Netbeans/web-app/src/
+        //Caminho Tiago
+         String pathRelatorios = "/Volumes/Macintosh_HD/Users/tiagomeurer/code/donc/"
+                 + "web-app/src/java/br/senac/donc/util/relatorios/2017/";
         // /home/danilosetubal/Devlopment/repositories/olho-na-camara/web-app/src/
         // Caminho completo do diretório onde estão os relatórios .txt
-        String pathRelatorios = "/projetos/web-app/src/"
-                + "java/br/senac/donc/util/relatorios/2017/";
+//        String pathRelatorios = "/projetos/web-app/src/"
+//                + "java/br/senac/donc/util/relatorios/2017/";
                 
 
         File f = null;

@@ -52,6 +52,7 @@
                         <tr>
                             <th>Posição</th>
                             <th>Vereador</th>
+                            <th>Partido</th>
                             <th>Gasto</th>
                         </tr>
                         </thead>
@@ -85,6 +86,7 @@
                                             <% count++; %>
                                         </td>
                                         <td><%= objeto.getNome() %></td>
+                                        <td><%= objeto.getPartido()%></td>
                                         <td><%= objeto.getGasto() %></td>
                                     </tr>
                                                                         

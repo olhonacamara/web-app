@@ -42,9 +42,9 @@ public class BalanceteDAOImpl extends BaseDAOImpl<Balancete, Long>
     
     public List<Ranking> listaRankingGeral() {
         
-        String sql = "SELECT SUM(balancetes.debitos_mes) as total, vereadores.nome_completo FROM"
+        String sql = "SELECT SUM(balancetes.debitos_mes) as total, vereadores.nome_completo, vereadores.partido FROM"
                 + " balancetes, vereadores where vereadores.id = balancetes.vereador_id "
-                + "group by vereadores.nome_completo order by total desc;";
+                + "group by vereadores.nome_completo, vereadores.partido order by total desc;";
         List<Ranking> retorno = new ArrayList<Ranking>();
         
         DecimalFormat df = new DecimalFormat("0.##");
@@ -56,6 +56,8 @@ public class BalanceteDAOImpl extends BaseDAOImpl<Balancete, Long>
             while (res.next()) {
                 Ranking item = new Ranking();
                 item.setNome(res.getString("nome_completo"));
+                item.setPartido(res.getString("partido"));
+                
                               
                 BigDecimal valor = new BigDecimal (res.getDouble("total"));  
                 NumberFormat nf = NumberFormat.getCurrencyInstance();  
@@ -109,9 +111,9 @@ public class BalanceteDAOImpl extends BaseDAOImpl<Balancete, Long>
     
     public List<Ranking> listarRankingGasto(String nomeGasto) {
         
-        String sql = "select vereadores.nome_completo as nome, SUM(balancetes." + nomeGasto + ") as gasto "
+        String sql = "select vereadores.nome_completo as nome, vereadores.partido as partido, SUM(balancetes." + nomeGasto + ") as gasto "
                 + "from vereadores, balancetes where vereadores.id = balancetes.vereador_id "
-                + "group by vereadores.nome_completo order by gasto desc;";
+                + "group by vereadores.nome_completo, vereadores.partido order by gasto desc;";
         
         List<Ranking> retorno = new ArrayList<Ranking>();
         
@@ -122,6 +124,7 @@ public class BalanceteDAOImpl extends BaseDAOImpl<Balancete, Long>
             while (res.next()) {
                 Ranking item = new Ranking();
                 item.setNome(res.getString("nome"));
+                item.setPartido(res.getString("partido"));
                               
                 BigDecimal valor = new BigDecimal (res.getDouble("gasto"));  
                 NumberFormat nf = NumberFormat.getCurrencyInstance();  
