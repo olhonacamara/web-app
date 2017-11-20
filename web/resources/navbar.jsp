@@ -210,13 +210,13 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
         <li>
-        <a href="#">Rankings</a>
+        <a href="index.jsp">Rankings</a>
         </li>
         <li>
         <a href="http://localhost:8080/web-app/test-resbeans.html">API</a>
         </li>
         <li>
-        <a href="#">Sobre</a>
+        <a href="sobre.jsp">Sobre</a>
         </li>
         </ul>
         </div>
