@@ -28,26 +28,23 @@
             vereadores e disponibiliza um ranking de gastos por vereador na web, bem como um webservice com os 
             dados coletados estruturados em um arquivo .json para que sejam utilizados por outros desenvolvedores 
             em suas aplicações.</p>
-        <br>
+        <br/>
         
         <p>
-           Caro amigo densenvolvedor, este projeto é totalmente open-source!</br>
+           Caro amigo desenvolvedor, este projeto é totalmente open-source!</br>
            Todo o código e documentação encontram-se no nosso github.</br>
            Acesse e contribua com a nossa comunidade!
         </p>
+        
         <a href="https://github.com/olhonacamara" target="_blank">
         <img style="height: 24px; width: 24px" title="GitHub" alt="githubIcon" 
              src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" />
         </a>
-        <a href="https://github.com/olhonacamara" target="_blank">https://github.com/olhonacamara</a>
-        
-        
-
-        
+        <b>
+            <a href="https://github.com/olhonacamara" target="_blank">https://github.com/olhonacamara</a>
+        </b>
+  
     </div>
-    
-    
-
 
     <jsp:include page="resources/footer.jsp" />
 

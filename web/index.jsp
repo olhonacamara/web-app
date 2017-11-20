@@ -46,7 +46,7 @@
             <option value="carimbos.jsp">Ranking - Carimbos</option>
             <option value="interurbano.jsp">Ranking - Ligações Interurbano</option>
             <option value="jornal-revista.jsp">Ranking - Jornais e Revistas</option>
-        </select> </br></br>
+        </select> <br/><br/>
         
     </div>
 
