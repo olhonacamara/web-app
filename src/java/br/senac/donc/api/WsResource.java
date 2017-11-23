@@ -5,6 +5,8 @@
  */
 package br.senac.donc.api;
 
+import br.senac.donc.relatorio.GastosMes;
+import br.senac.donc.util.HibernateUtil;
 import com.google.gson.Gson;
 import java.util.List;
 import javax.ws.rs.core.Context;
@@ -55,6 +57,20 @@ public class WsResource {
         VereadorDAO dao = new VereadorDAO();
         lista = dao.listar();
 
+        //converter para Json
+        Gson g = new Gson();
+        return g.toJson(lista);
+
+    }
+    
+    @GET
+    @Path("grafico/geral")
+    @Produces(MediaType.APPLICATION_JSON)
+    public String listaGraficoGeral() {
+        List<GastosMes> lista;
+
+        BalanceteDAO dao = new BalanceteDAO();
+        lista = dao.pesquisaGastoMes(HibernateUtil.abrirSessao());
         //converter para Json
         Gson g = new Gson();
         return g.toJson(lista);

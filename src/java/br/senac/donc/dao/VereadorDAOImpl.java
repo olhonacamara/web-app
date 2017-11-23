@@ -1,11 +1,20 @@
 package br.senac.donc.dao;
 
+import br.senac.donc.api.Conexao;
+import br.senac.donc.model.Ranking;
 import br.senac.donc.model.Vereador;
 import br.senac.donc.relatorio.GastosMes;
 import br.senac.donc.util.HibernateUtil;
 import java.io.Serializable;
+import java.math.BigDecimal;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -38,9 +47,15 @@ public class VereadorDAOImpl extends BaseDAOImpl<Vereador, Long>
 //       System.out.println(vereadorDao.pesquisaVereadorId("AFRÂNIO TADEU BOPPRÉ", HibernateUtil.abrirSessao()));
 
         List<GastosMes> gastos = vereadorDao.pesquisaGastoMes(HibernateUtil.abrirSessao());
-        System.out.println(gastos);
+        
+        for (int i = 0; i < gastos.size(); i++) {
+            System.out.println(gastos.get(i).getMes() + " - " + gastos.get(i).getTotalGasto());
+        }
+        
+        
     }
-
+    
+    
     @Override
     public List<GastosMes> pesquisaGastoMes(Session session) throws HibernateException {
         List<GastosMes> gastos = new ArrayList<>();
@@ -51,7 +66,9 @@ public class VereadorDAOImpl extends BaseDAOImpl<Vereador, Long>
         for (int i = 1; i <= 12; i++) {
             consulta = session.createQuery("select sum(b.debitosMes) from Balancete b where b.dataInicial = '2017-" + i + "-01'");
             total = (Double) consulta.uniqueResult();
-            gastosMes = new GastosMes();
+            
+            gastosMes = new GastosMes();           
+            
             gastosMes.setTotalGasto(total);//pesquisar converter double em decimal moeda 2 casas
             switch (i) {
                 case 1:

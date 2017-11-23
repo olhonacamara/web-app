@@ -59,7 +59,7 @@ public class GastoRelControle implements Serializable{
         session = HibernateUtil.abrirSessao();
         List<GastosMes> gastos = vereadorDAO.pesquisaGastoMes(session);
         for (GastosMes gasto : gastos) {
-            series1.set(gasto.getMes(), gasto.getTotalGasto());
+//            series1.set(gasto.getMes(), gasto.getTotalGasto());
         }
  
         model.addSeries(series1);
