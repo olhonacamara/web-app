@@ -37,6 +37,10 @@ footer {
     margin-left: 90px;
 }
 
+.total-gasto {
+    font-size: 70px;
+}
+
 .chart-container {
     margin-top: 70px;
 }
@@ -77,4 +81,20 @@ footer {
 
 .index-content-container {
     margin-top: 150px;
+}
+
+.social {
+    font-size: 40px; 
+}
+
+@media (max-width: 767px) { 
+    .title-project {
+        position: absolute;
+        margin-top: 55px;
+        margin-left: 100px;
+    }
+    
+    .total-gasto {
+        font-size: 50px;
+    }
 }

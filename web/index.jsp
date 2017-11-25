@@ -11,8 +11,13 @@
             for (Ranking objeto : objetos) {
         %>
         <tr>
-        <div style="font-size: 80px; color: red; text-align: center"><%= objeto.getSomaTotal()%> 
-            <h3 style="color: black">
+        <div style="text-align: center">
+            
+            <div class="total-gasto">
+                <%= objeto.getSomaTotal()%> 
+            </div>
+            
+            <h3 style="color: '#22375b'">
                 Este é o total gasto pelos vereadores com verba de gabinete desde Janeiro de 2017!!
             </h3>
         </div> 
@@ -27,7 +32,9 @@
     <div style = "text-align: center">
         <h4>Selecione um item abaixo para visualizar o ranking destes gastos: </h4>
 
-        <select name="rankings" onchange="location = this.value;">
+        <select data-live-search="true" class="selectpicker" name="rankings" 
+                onchange="location = this.value;"
+                title="Escolha uma categoria.">
             <option value="geral.jsp"></option>
             <option value="geral.jsp">Ranking - Geral</option>
             <option value="partido.jsp">Ranking - Geral por partido</option>

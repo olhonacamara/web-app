@@ -1,7 +1,7 @@
 <!-- Footer -->
         <footer>
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12" style="text-align: center;">
                     <p>Copyright &copy; Olho na Câmara! 2017</p>
                 </div>
                 <!-- /.col-lg-12 -->
@@ -21,8 +21,15 @@
     <!-- Chart.js -->
     <!--<script src="resources/js/chart.js"></script>-->
 
-    <!-- Customized JS -->
+ 
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+    
+       <!-- Customized JS -->
     <script src="resources/js/custom.js"></script>
+    <script src="resources/js/select.js"></script>
+
 
 
 </body>
