@@ -104,5 +104,6 @@
         </div>
 
         <hr>
-
-            <jsp:include page="resources/footer.jsp" />
+        
+        <jsp:include page="resources/footer.jsp" />
+        <script src="resources/js/charts/chart-xerox.js"></script>

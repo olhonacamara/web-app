@@ -105,4 +105,5 @@
 
         <hr>
 
-            <jsp:include page="resources/footer.jsp" />
+        <jsp:include page="resources/footer.jsp" />
+        <script src="resources/js/charts/chart-telefone-movel.js"></script>

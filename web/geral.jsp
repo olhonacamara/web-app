@@ -106,6 +106,5 @@
     <hr>
 
     <jsp:include page="resources/footer.jsp" />
-    
     <script src="resources/js/charts/chart-geral.js"></script>
 

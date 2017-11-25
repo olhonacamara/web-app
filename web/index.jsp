@@ -41,7 +41,7 @@
             <option value="outros.jsp">Ranking - Outros</option>
             <option value="selos.jsp">Ranking - Selos</option>
             <option value="servicos.jsp">Ranking - Serviços</option>
-            <option value="telefone-tim.jsp">Ranking - Telefone Tim</option>
+            <option value="telefone-movel.jsp">Ranking - Telefone Móvel</option>
             <option value="cursos.jsp">Ranking - Cursos</option>
             <option value="carimbos.jsp">Ranking - Carimbos</option>
             <option value="interurbano.jsp">Ranking - Ligações Interurbano</option>

@@ -16,6 +16,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PUT;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.core.MediaType;
 
 /**
@@ -74,7 +75,54 @@ public class WsResource {
         //converter para Json
         Gson g = new Gson();
         return g.toJson(lista);
+    }
+    
+    @GET
+    @Path("grafico/{categoria}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public String listaDadosGraficos(@PathParam("categoria") String categoria) {
+        
+        List<GastosMes> lista;
 
+        BalanceteDAO dao = new BalanceteDAO();
+        lista = dao.pesquisaGastoMesTest(categoria, HibernateUtil.abrirSessao());
+        //converter para Json
+        Gson g = new Gson();
+        return g.toJson(lista);
+        
+    }
+    
+    
+    //////////////////////////
+    
+    
+//   @Path("/pedido/{id}")
+//    public class PedidoResource {
+//     @GET
+//    @Produces( { MediaType.APPLICATION_XML })
+//     public Pedido getPedidoById(@PathParam("id") Long id) {
+//       PedidoDAO pedidoDAO = new PedidoDAO();
+//       Pedido pedido = pedidoDAO.getPedidoById(id);
+//       return pedido;
+//     }
+//    }
+    
+    
+    /////////////////////////
+    
+    
+    
+    @GET
+    @Path("grafico/passagens")
+    @Produces(MediaType.APPLICATION_JSON)
+    public String listaGraficoGeralTest() {
+        List<GastosMes> lista;
+
+        BalanceteDAO dao = new BalanceteDAO();
+        lista = dao.pesquisaGastoMesTest("passagens", HibernateUtil.abrirSessao());
+        //converter para Json
+        Gson g = new Gson();
+        return g.toJson(lista);
     }
 
     //recall tens que usar lista vereadores;
