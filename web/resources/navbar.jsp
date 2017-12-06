@@ -10,6 +10,11 @@
                 <meta name="author" content="">
 
                     <title>Olho na Câmara! - Florianópolis, SC</title>
+                    
+                    
+<!-- Odometr includes -->
+<link rel="stylesheet" href="http://github.hubspot.com/odometer/themes/odometer-theme-default.css" />
+<script src="http://github.hubspot.com/odometer/odometer.js"></script>
 
                     <!-- Bootstrap Core CSS -->
                     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"

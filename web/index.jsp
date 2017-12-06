@@ -13,9 +13,14 @@
         <tr>
         <div style="text-align: center">
             
-            <div class="total-gasto">
+            
+            <span style="font-size: 40px;">R$</span>
+            <div  id="total-gasto" class="total-gasto" hidden>
                 <%= objeto.getSomaTotal()%> 
             </div>
+            
+            <div id="odometer" class="odometer" style="font-size: 70px;">0</div>
+
             
             <h3 style="color: '#22375b'">
                 Este é o total gasto pelos vereadores com verba de gabinete desde Janeiro de 2017!!

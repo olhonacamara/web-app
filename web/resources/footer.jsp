@@ -29,6 +29,9 @@
        <!-- Customized JS -->
     <script src="resources/js/custom.js"></script>
     <script src="resources/js/select.js"></script>
+    <script src="resources/js/test.js"></script>
+    
+
 
 
 
