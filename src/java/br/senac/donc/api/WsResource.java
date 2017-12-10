@@ -5,6 +5,7 @@
  */
 package br.senac.donc.api;
 
+import static br.senac.donc.model.Vereador_.id;
 import br.senac.donc.relatorio.GastosMes;
 import br.senac.donc.util.HibernateUtil;
 import com.google.gson.Gson;
@@ -142,6 +143,23 @@ public class WsResource {
 
     }
 
+    @GET
+    @Path("gastos_vereador/list/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+
+    public String listGastosPorId(@PathParam("id") int gasto) {
+        List<GastoSERVICE> lista;
+
+        GastosDAO dao = new GastosDAO();
+        lista = dao.listarGastosPorId(gasto, HibernateUtil.abrirSessao());
+
+        System.out.println("########################################### " + lista);
+        Gson g = new Gson();
+        return g.toJson(lista);
+
+    }
+    
+    
     @GET
     @Path("gastos_vereador/list")
     @Produces(MediaType.APPLICATION_JSON)
