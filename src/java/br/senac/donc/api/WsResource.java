@@ -25,7 +25,7 @@ import javax.ws.rs.core.MediaType;
  *
  * @author smaicon
  */
-@Path("ws")
+@Path("Web_Service_OlhoNaCamara")
 public class WsResource {
 
     @Context
