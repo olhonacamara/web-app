@@ -16,6 +16,7 @@ import java.util.logging.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
+
 /**
  *
  * @author smaicon
@@ -37,17 +38,17 @@ public class BalanceteDAO {
                 item.setBolsa_estagio(res.getDouble("bolsa_estagio"));
                 item.setCarimbos(res.getDouble("carimbos"));
                 item.setCorreio(res.getDouble("correio"));
-                 item.setCota_mensal(res.getDouble("cota_mensal"));
-               item.setCreditos(res.getDouble("creditos"));
+                item.setCota_mensal(res.getDouble("cota_mensal"));
+                item.setCreditos(res.getDouble("creditos"));
                 item.setCreditos_mes(res.getDouble("creditos_mes"));
-              item.setCursos(res.getDouble("cursos"));
+                item.setCursos(res.getDouble("cursos"));
                 item.setDataFinal(res.getDate("dataFinal"));
                 item.setDataInicial(res.getDate("dataInicial"));
                 item.setDebito_ano_anterior(res.getDouble("debito_ano_anterior"));
                 item.setDebitos(res.getDouble("debitos"));
                 item.setDebitos_mes(res.getDouble("debitos_mes"));
-               item.setDiarias(res.getDouble("diarias"));
-             item.setGratificacao(res.getDouble("gratificacao"));
+                item.setDiarias(res.getDouble("diarias"));
+                item.setGratificacao(res.getDouble("gratificacao"));
                 item.setInterurbano(res.getDouble("interurbano"));
                 item.setJornal_revista(res.getDouble("jornal_revista"));
                 item.setMaterial_expediente(res.getDouble("material_expediente"));
@@ -75,7 +76,7 @@ public class BalanceteDAO {
         return retorno;
 
     }
-    
+
     public List<GastosMes> pesquisaGastoMes(Session session) throws HibernateException {
         List<GastosMes> gastos = new ArrayList<>();
         GastosMes gastosMes;
@@ -85,9 +86,9 @@ public class BalanceteDAO {
         for (int i = 1; i <= 12; i++) {
             consulta = session.createQuery("select sum(b.debitosMes) from Balancete b where b.dataInicial = '2017-" + i + "-01'");
             total = (Double) consulta.uniqueResult();
-            
-            gastosMes = new GastosMes();           
-            
+
+            gastosMes = new GastosMes();
+
             gastosMes.setTotalGasto(total);//pesquisar converter double em decimal moeda 2 casas
             switch (i) {
                 case 1:
@@ -134,9 +135,8 @@ public class BalanceteDAO {
 
         return gastos;
     }
-    
+
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
     public List<GastosMes> pesquisaGastoMesTest(String categoria, Session session) throws HibernateException {
         List<GastosMes> gastos = new ArrayList<>();
         GastosMes gastosMes;
@@ -146,9 +146,9 @@ public class BalanceteDAO {
         for (int i = 1; i <= 12; i++) {
             consulta = session.createQuery("select sum(b." + categoria + ") from Balancete b where b.dataInicial = '2017-" + i + "-01'");
             total = (Double) consulta.uniqueResult();
-            
-            gastosMes = new GastosMes();           
-            
+
+            gastosMes = new GastosMes();
+
             gastosMes.setTotalGasto(total);//pesquisar converter double em decimal moeda 2 casas
             switch (i) {
                 case 1:

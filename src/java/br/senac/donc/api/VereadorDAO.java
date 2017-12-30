@@ -14,7 +14,6 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
 /**
  *
  * @author smaicon
@@ -114,7 +113,7 @@ public class VereadorDAO {
                 item.setCor_raca(res.getString("cor_raca"));
                 item.setData_nascimento(res.getDate("data_nascimento"));
                 SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-               
+
                 item.setEmail(res.getString("email"));
                 item.setFim_mandato(res.getDate("fim_mandato"));
                 item.setFoto(res.getString("foto")); // retorna url da imagem
@@ -123,8 +122,7 @@ public class VereadorDAO {
                 item.setInicio_mandato(res.getDate("inicio_mandato"));
                 item.setPartido(res.getString("partido"));
                 item.setTotal_votos(res.getInt("total_votos"));
-                
-                
+
                 retorno.add(item);
             }
 

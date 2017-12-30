@@ -12,16 +12,16 @@
         %>
         <tr>
         <div style="text-align: center">
-            
-            
+
+
             <span style="font-size: 40px;">R$</span>
             <div  id="total-gasto" class="total-gasto" hidden>
                 <%= objeto.getSomaTotal()%> 
             </div>
-            
+
             <div id="odometer" class="odometer" style="font-size: 70px;">0</div>
 
-            
+
             <h3 style="color: '#22375b'">
                 Este é o total gasto pelos vereadores com verba de gabinete desde Janeiro de 2017!!
             </h3>
@@ -33,7 +33,7 @@
         %>
     </div>
     <br>
-    
+
     <div style = "text-align: center">
         <h4>Selecione um item abaixo para visualizar o ranking destes gastos: </h4>
 
@@ -59,10 +59,10 @@
             <option value="interurbano.jsp">Ranking - Ligações Interurbano</option>
             <option value="jornal-revista.jsp">Ranking - Jornais e Revistas</option>
         </select> <br/><br/>
-        
+
     </div>
 
-   
+
     <jsp:include page="resources/footer.jsp" />
 
 </div>

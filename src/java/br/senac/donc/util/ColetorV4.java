@@ -25,7 +25,7 @@ public class ColetorV4 {
         int contVereador = 0;
 
         //Caminho Tiago
-         String pathRelatorios = "/Volumes/Macintosh_HD/Users/tiagomeurer/code/donc/"
+         String pathRelatorios = "/Volumes/Machintosh_HD/tiagomeurer/Documents/code/donc/"
                  + "web-app/src/java/br/senac/donc/util/relatorios/2017/";
         // /home/danilosetubal/Devlopment/repositories/olho-na-camara/web-app/src/
         // Caminho completo do diretório onde estão os relatórios .txt
@@ -302,16 +302,16 @@ public class ColetorV4 {
                         break;
 
                     // Jornal Revista - OK
-                    case "Débito ano anterior":
-                        lerArquivo.readLine();
-                        lerArquivo.readLine();
-                        String jornalRevista = lerArquivo.readLine();
-                        jornalRevista = jornalRevista.replace(",", "");
-                        Double jornalRevistaDouble = (Double.parseDouble(jornalRevista));
-                        balancete.setJornalRevista(jornalRevistaDouble);
-                        System.out.println("Valor capturado de Jornal/Revista: " + balancete.getJornalRevista());
-                        totalDebitos.add(balancete.getJornalRevista());
-                        break;
+//                    case "Débito ano anterior":
+//                        lerArquivo.readLine();
+//                        lerArquivo.readLine();
+//                        String jornalRevista = lerArquivo.readLine();
+//                        jornalRevista = jornalRevista.replace(",", "");
+//                        Double jornalRevistaDouble = (Double.parseDouble(jornalRevista));
+//                        balancete.setJornalRevista(jornalRevistaDouble);
+//                        System.out.println("Valor capturado de Jornal/Revista: " + balancete.getJornalRevista());
+//                        totalDebitos.add(balancete.getJornalRevista());
+//                        break;
 
                     case "AltoQi Tecnologia em  Informática LtdaCÂMARA MUNICIPAL DE FLORIANÓPOLIS":
                         contPage++;

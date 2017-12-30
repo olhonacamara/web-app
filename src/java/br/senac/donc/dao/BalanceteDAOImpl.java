@@ -145,6 +145,40 @@ public class BalanceteDAOImpl extends BaseDAOImpl<Balancete, Long>
                 
     }
     
+    public List<Ranking> listarRankingSomaGasto(String nomeGasto) {
+        
+        String sql = "select SUM(balancetes." + nomeGasto + ") as gasto "
+                + "from balancetes;";
+        
+        List<Ranking> retorno = new ArrayList<Ranking>();
+        
+        PreparedStatement pst = Conexao.getPreparedStatement(sql);
+        try {
+
+            ResultSet res = pst.executeQuery();
+            while (res.next()) {
+                Ranking item = new Ranking();
+                              
+                BigDecimal valor = new BigDecimal (res.getDouble("gasto"));  
+                NumberFormat nf = NumberFormat.getCurrencyInstance();  
+                String formatado = nf.format (valor);
+                System.out.println(formatado);
+                
+                item.setSomaGasto(formatado);             
+                
+                retorno.add(item);
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(br.senac.donc.api.VereadorDAO.class.getName()).log(Level.SEVERE, null, ex);
+
+        }
+
+        return retorno;
+                
+    }
+
+    
     public List<Ranking> listarRankingPartido() {
         
         String sql = "SELECT SUM(balancetes.debitos_mes) as total, vereadores.partido as partido "

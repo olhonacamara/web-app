@@ -15,6 +15,8 @@ public class Ranking {
     private String gasto;
     private String partido;
     private String somaTotal;
+    private String SomaGasto;
+    
 
     public Ranking() {
     }
@@ -49,6 +51,14 @@ public class Ranking {
 
     public void setSomaTotal(String somaTotal) {
         this.somaTotal = somaTotal;
+    }
+
+    public String getSomaGasto() {
+        return SomaGasto;
+    }
+
+    public void setSomaGasto(String SomaGasto) {
+        this.SomaGasto = SomaGasto;
     }
     
     

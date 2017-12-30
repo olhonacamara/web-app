@@ -5,7 +5,6 @@
  */
 package br.senac.donc.api;
 
-import static br.senac.donc.model.Vereador_.id;
 import br.senac.donc.relatorio.GastosMes;
 import br.senac.donc.util.HibernateUtil;
 import com.google.gson.Gson;
@@ -25,7 +24,7 @@ import javax.ws.rs.core.MediaType;
  *
  * @author smaicon
  */
-@Path("Web_Service_OlhoNaCamara")
+@Path("ws")
 public class WsResource {
 
     @Context

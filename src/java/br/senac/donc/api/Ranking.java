@@ -10,6 +10,7 @@ package br.senac.donc.api;
  * @author danilosetubal
  */
 public class Ranking {
+
     private Integer posicao;
     private String nome;
     private double total;
@@ -37,8 +38,5 @@ public class Ranking {
     public void setTotal(double total) {
         this.total = total;
     }
-
-
-   
 
 }
